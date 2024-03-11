@@ -4,34 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QRide</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="main.css">
 </head>
-<body>  
-    <header>
-        <div class="navbar">
-            <p class="QR">QR </p>
-            <p class="ides"> ides</p>
-            <p class="vr">Vehicle Rental</p>
+<body class="flex flex-col gap-0 bg-Twhite text-white w-[100vw]">  
+    <nav class="bg-Bpurple h-[60px] w-[100%] flex items-center justify-center font-playfair " >
+        <div >
+            <a href="#" class="font-bold flex text-3xl">QR <p class="font-playfair font-light">ides</p> </a>
+            <p class="absolute right-3 top-10 pr-1 font-poppins text-sm">Vehicle Rental</p>
         </div>
-    </header>
+    </nav>
     
-    <div class="main">
-        <button>
+    <div class="flex flex-col min-h-[75vh] m-[auto 5rem] items-center justify-center bg-gradient-to-r from-sky-500 to-indigo-500">
+        <button class="h-[50px] w-[100px] rounded-[4px] bg-Bpurple hover:bg-[#303062] active:bg-[#26264e] focus:outline-none focus:ring focus:ring-violet-300 " >
             <a href="rent.html" style="text-decoration: none;">
                 Rent
             </a>
         </button>
         <br>
-        <button>Lent</button>
+        <button class="h-[50px] w-[100px] rounded-[4px] bg-Bpurple hover:bg-[#303062] active:bg-[#26264e] focus:outline-none focus:ring focus:ring-violet-300 ">Lend</button>
         <br>
-        <p style="color:#22223b ;">Rentals</p>
+        <p class="text-Bpurple">Rentals</p>
     </div>
 
-    <footer>
-        <div class="foot"></div>
+    <footer class="h-75 relative bg-Bpurple text-Twhite ">
+        <div class="h-[50px] bg-Mpurple">
+
+        </div>
     </footer>
 
 </body>
