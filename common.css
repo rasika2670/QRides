@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    color: #F2E9E4;
+}
+
+body{
+    background-color: #F2E9E4;
+}
+
+.navbar{
+    background-color: #22223b;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.QR{
+    font-weight: bold;
+}
+
+.vr
+{
+    position: absolute; 
+    right: 10px; 
+    font-size: 0.75rem; 
+    top: 40px;
+    padding-right: 5px; 
+    font-family: 'Poppins', sans-serif;
+}
+
+.back-icon{
+    position: absolute;
+    left: 20px;
+    font-size: 30px;
+}
+
+footer{
+    height: 300px;
+    background-color: #22223b;
+    color: #F2E9E4;
+}
+.foot{
+    height: 50px;
+    background-color: #39395e;
+}
