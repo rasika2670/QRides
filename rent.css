@@ -1,0 +1,117 @@
+.rent{
+    color: #22223b;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    left: 5%;
+    height: 50px;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-select{
+    width: 90%;
+    height: 30px;
+    color: #22223b;
+    border-radius:50px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly ;
+    padding:1rem;
+}
+
+.info{
+    height: 110px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    margin: 5px 2px;
+    padding: 5px;
+    display: flex;
+    position: relative;
+}
+.info p{
+    color: #22223b;
+    font-family: 'Rubik', sans-serif;
+    margin: 4px;
+}
+
+.img{
+    height: 100px;
+    width: 100px;
+    border: 1px solid #22223b;
+    border-radius: 4px;
+    background-size: cover;
+}
+
+.content{
+    padding-left: 15px;
+}
+
+.company-name{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.pr{
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+@media(max-width: 400px)
+{
+    .info{
+        width:100%;
+        align-items: center;
+    }
+}
+
+@media (min-width: 400px) and (max-width:700px)
+{
+    .info{
+        width:46%;
+        align-items: center;
+    }
+}
+
+@media(min-width: 700px) and (max-width:1000px)
+{
+    .info{
+        width: 31%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+    .img{
+        position: relative;
+        width: 99%;
+        height:80%;
+        align-self: center;
+    }
+}
+
+@media(min-width:1000px)
+{
+    .info{
+        width: 23.5%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+    .img{
+        position: relative;
+        width: 99%;
+        height:80%;
+        align-self: center;
+    }
+    
+}
