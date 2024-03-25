@@ -11,6 +11,7 @@ module.exports = {
         Bpurple:"#22223b",
         Twhite:"#F2E9E4",
         Mpurple:"#39395e",
+        Bsilver:"#d9d9d9",
       }
     },
   },
