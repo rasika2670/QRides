@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>QRide</title>
+    <link rel="icon" href="./Images/2.png" type="image/icon type"/>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+
+   
+</head>
+<body class="flex flex-col gap-0 bg-Twhite text-black w-[100vw]">  
+    <nav class="bg-Bpurple h-[100px] w-[100%] text-white flex items-center justify-around font-playfair px-[50px]">
+        <div class="h-[auto] w-[140px]">
+            <a href="index.html"><img src="/Images/QRide logo.png" alt="logo"></a>
+        </div>
+        <div class="flex flex-row flex-wrap flex-grow max-w-[700px] justify-between mx-12 lg:flex max-sm:hidden">
+            <a href="index.html"><div class="flex flex-col items-center"><i data-feather="home" class="size-6"></i>Home</div></a>
+            <a href="navig.html"><div class="flex flex-col items-center"><i data-feather="map" class="size-6"></i>Navigation</div></a>
+            <a href="help.html"><div class="flex flex-col items-center"><i data-feather="cloud" class="size-6"></i>Support</div></a>
+            <div id="myBtn" class="flex flex-col items-center"><i data-feather="bell" class="size-6"></i>Notification</div>
+        </div>
+        <div>
+            <i data-feather="user" class="size-10"></i>
+        </div>
+        <div id="hamburger" class="sm:hidden">
+            <i id="toggleSidebar" data-feather="menu" class="size-6 cursor-pointer font-white text-white"></i>
+        </div>
+    </nav>
+    
+    <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <ul class="py-8">
+            <li><a href="index.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Home</a></li>
+            <li><a href="navig.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Navigation</a></li>
+            <li><a href="help.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Support</a></li>
+            <li><a href="#" id="closeSidebar" class="block px-4 py-2 text-sm hover:bg-gray-800">Close</a></li>
+        </ul>
+    </div>
+    
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
+    
+    <div class="flex flex-row items-center justify-center box-border drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] w-[90%                                                                                                                                                                                                                                                                                                                                                                                                                          ]">
+        <div class="h-24 w-24 bg-slate-600 rounded-md">
+            <img src="" alt="">
+        </div>
+        <div class="flex flex-col p-5 m-3">
+            <h1>Company</h1>
+            <h4>Bike Name</h4>
+            <div class="flex gap-2">
+                <p><i class="fa-solid fa-star"></i>4.3</p> <br>
+                <p>Rs.30/hrs</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-2 w-[90%] justify-center m-auto text-black">
+        <input type="name"  placeholder="Name">
+        <input type="number"  placeholder="Phone No. ">
+        <input type="email"  placeholder="Email id">
+        <input type="address"  placeholder="Address">
+        <input type="number" placeholder="Liscence No. ">Time
+        <div class="flex gap-4 overflow-hidden">
+            <input type="text" name="name" id="" placeholder="From">
+            <input type="text" name="to" id="" placeholder="To">
+        </div>
+    </div>
+
+    <div class="cont3">
+        <h2>Price Details</h2>
+        <div>
+            <p>Total Hrs</p>
+            <p>X hrs.</p>
+        </div>
+        <div>
+            <p>Total Amount</p>
+            <p>X amt.</p>
+        </div>
+    </div>
+
+    <div class="cont4">
+        <button>Book Now</button>
+    </div>
+<script>
+    feather.replace()
+
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementById("close");
+
+    btn.onclick = function() {
+    modal.style.display = "flex";
+    }
+
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+
+    var sidebar = document.getElementById("sidebar");
+var hamburger = document.getElementById("hamburger");
+
+hamburger.onclick = function() {
+    sidebar.classList.remove("sidebar-closed");
+    sidebar.classList.add("sidebar-open");
+}
+
+window.onclick = function(event) {
+    if (event.target == sidebar) {
+        sidebar.classList.remove("sidebar-open");
+        sidebar.classList.add("sidebar-closed");
+    }
+}
+    
+</script>
+</body>
+</html>

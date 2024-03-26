@@ -1,37 +1,51 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
 
-<h2>Image Slideshow</h2>
+    <style>
+        .sidebar-open { display: block; }
+        .sidebar-closed { display: none; }
+    </style>
+</head>
+<body class="bg-gray-200 flex items-center justify-center h-screen">
 
-<div id="imgSlide">
-  <img src="/Images/6.pngg" style="width:100%">
-  <img src="/Images/5.png" style="width:100%">
-  <img src="/Images/7.png" style="width:100%">
+<div id="hamburger" class=" cursor-pointer">
+    <i data-feature="menu" class=" text-black"></i>
 </div>
 
-<button onclick="plusDivs(-1)">Previous</button>
-<button onclick="plusDivs(1)">Next</button>
+<div id="sidebar" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden sidebar-closed">
+    <div class="bg-white p-5 rounded shadow-lg w-64">
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+        </ul>
+    </div>
+</div>
 
 <script>
-var slideIndex = 1;
-showDivs(slideIndex);
+var sidebar = document.getElementById("sidebar");
+var hamburger = document.getElementById("hamburger");
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+hamburger.onclick = function() {
+    sidebar.classList.remove("sidebar-closed");
+    sidebar.classList.add("sidebar-open");
 }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementById("imgSlide").getElementsByTagName("img");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
+window.onclick = function(event) {
+    if (event.target == sidebar) {
+        sidebar.classList.remove("sidebar-open");
+        sidebar.classList.add("sidebar-closed");
+    }
 }
+
+    feather.replace()
+
 </script>
 
 </body>
-</html> 
+</html>
