@@ -20,8 +20,7 @@
                     <i class="fa-solid fa-arrow-left"></i>
                 </a>
             </div>
-            <p class="QR">QR </p>
-            <p class="ides"> ides</p>
+            <img src="Images/logo.jpg" style="height: 60px;">
             <p class="vr">
                 Vehicle Rental
             </p>
@@ -30,40 +29,85 @@
 
     <main>
         <div class="info">
-            <div class="content">
+            <div class="content" style="width: 400px;">
                 <p class="company-name">Company</p>
-                <p class="bike-name">Bike name</p>  
-                <div class="pr">
-                    <i class="fa-solid fa-star" style="color: #22223b;"></i>
-                    <p class="rating">4.3</p>
+                <div class="rate">
+                    <p class="bike-name">Bike name</p>  
+                    <div class="pr" style="position:relative; ">
+                        <i class="fa-solid fa-star" style="color: #22223b;"></i>
+                        <i class="fa-solid fa-star" style="color: #22223b;"></i>
+                        <i class="fa-solid fa-star" style="color: #22223b;"></i>
+                        <i class="fa-solid fa-star" style="color: #22223b;"></i>
+                        <i class="fa-regular fa-star" style="color: #22223b;"></i>
+                        <p class="rating">4.3</p>
+                    </div>
                 </div>
+                <div class="img" style="background-image: url('Images/bg.jpg');"></div>
             </div>
-            <div class="img" style="background-image: url('blue\ bike.jpeg');"></div>
-            <div class="price">
-                <p>Price : Rs. </p><p class="pop">30</p><p>/hour</p>
-            </div>
-            <div class="price">
-                <p>Availability :</p>
-                <p class="pop">Monday</p><p> to </p><p class="pop">Friday</p>
-            </div>
-            <div class="price">
-                <p>Time Slot : </p>
-                <p class="pop">9:00</p><p> am to </p><p class="pop">5:00</p><p> pm</p>
-            </div>
-            <div class="price">
-                <i class="fa-solid fa-location-dot" style="color: #22223b; margin: 4px;"></i>
-                <p>K.K.Wagh Institute of Engineering Education and Research, Panchavati, Nashik, 422207</p>
-            </div>
+            
+            <div class="vehicle">
+                <div class="price">
+                    <p>Price : Rs. </p><p class="pop">50</p><p>/hour</p>
+                </div>
+                <div class="price">
+                    <p>Availability :</p>
+                    <p class="pop">Monday</p><p> to </p><p class="pop">Friday</p>
+                </div>
+                <div class="price">
+                    <p>Time Slot : </p>
+                    <p class="pop">8:00</p><p> am to </p><p class="pop">3:00</p><p> pm</p>
+                </div>
+                <div class="price">
+                    <i class="fa-solid fa-location-dot" style="color: #22223b; margin: 4px;"></i>
+                    <p>K.K.Wagh Institute of Engineering Education and Research, Panchavati, Nashik, 422207</p>
+                </div>
+                <button id="bookNowBtn">Book Now</button>
+                
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close-btn" style="color: #22223b;" onclick="closePopup()">&times;</span>
+                        <p style="font-size: 1.2rem; font-weight: bold;">Terms and Conditions</p>
+                        <!-- Your terms and conditions content here -->
+                        <p style="margin: 1rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+                        <label for="agreeCheckbox" class="checkbox">
+                            <input type="checkbox" id="agreeCheckbox">  Agree
+                        </label>
+                        <button id="continueBtn" disabled>Continue</button>
+                    </div>
+                </div>
+
+                <hr style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);">
+                
+                <p style="font-size: 1.2rem; margin-top: 1.5rem;">Vehicle Details</p>
+                
+                <div style="display: flex; padding:0.5rem;">
+                    <div style="position: relative; width: 50%; display: flex; flex-direction: column; justify-content: space-evenly;" >
+                        <p class="pop">Model</p>
+                        <p class="pop">Vehicle no.</p>
+                        <p class="pop">Mileage</p>
+                        <p class="pop">Power</p>
+                        <p class="pop">Weight</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: space-evenly;">
+                        <p>Honda Hornet</p>
+                        <p>MH15 xxxx</p>
+                        <p>50 kmpl</p>
+                        <p>18.4 PS</p>
+                        <p>139 kg</p>
+                    </div>
+                </div>
+            </div>        
+        </div>     
+        
+        <div>
+            <p style="font-size: 1.2rem; margin-top: 1.5rem;">Reviews</p>
         </div>
-        <button>Book Now</button>
-        <hr>
-        <p style="font-size: 1.2rem;">Vehicle Details</p>
     </main>
 
     <footer>
         <div class="foot"></div>
     </footer>
 
+    <script src="popup.js"></script>
 </body>
-
 </html>

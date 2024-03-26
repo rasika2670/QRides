@@ -6,6 +6,7 @@ module.exports = {
       fontFamily:{
         poppins:['Poppins', "sans-serif"],
         playfair:['Playfair Display'],
+        rubik: ['Rubik', 'sans-serif'],
       },
       colors:{
         Bpurple:"#22223b",

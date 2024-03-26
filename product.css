@@ -1,25 +1,23 @@
 .info{
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 1rem;
 }
 
-.info p{
+p{
     color: #22223b;
-    font-family: 'Rubik', sans-serif;
     margin: 4px;
-}
-
-.content{
-    align-self: flex-start;
-    padding-left: 1rem;
 }
 
 .company-name{
     font-weight: bold;
     font-size: 1.2rem;
+}
+
+.rate{
+    display: flex; 
+    width: 400px; 
+    justify-content: space-between;
 }
 
 .pr{
@@ -29,11 +27,12 @@
 }
 
 .img{
-    width:98%;
+    width:400px;
     height: 400px;
     background-size: cover;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     margin: 1rem;
+    margin-left: 0px;
 }
 
 .price{
@@ -44,7 +43,107 @@
 .pop{
     font-weight: bold; font-size: 1.1rem;
 }
-button{
+
+.vehicle{
+    width: 600px; 
+    margin: 3rem; 
+    display: flex; 
+    flex-direction: column;
+}
+
+#bookNowBtn{
     background-color: #22223b;
+    font-size: 1.3rem;
+    margin: 1.5rem;
+    position: relative;
+    align-self: center;
+    height: 30px;
+    width: 200px;
+    border-radius:16px;
+}
+
+button:hover{
+    opacity: 80%;
+    cursor:pointer;
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.popup {
+    display: none; /* Hide the popup by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 999; /* Ensure popup appears above other content */
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+.checkbox{
+    color: #22223b;
+}
+
+#continueBtn{
+    color: #22223b;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #F2E9E4;
+    border-radius: 4px;
+}
+
+@media(max-width: 600px)
+{
+    .info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .content{
+        width: 90%;
+    }
+    .img{
+        width: 90%;
+    }
+    .rate{
+        width: 90%;
+    }
+    .vehicle{
+        margin: 1rem;
+        width: 90%;
+    }
     
+}
+
+@media (min-width: 600px) and (max-width:800px)
+{
+    .info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .vehicle{
+        margin: 1rem;
+    }
 }
