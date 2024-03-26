@@ -3,30 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>QRide</title>
     <link rel="icon" href="./Images/2.png" type="image/icon type"/>
     <link rel="stylesheet" href="main.css">
     <script src="https://unpkg.com/feather-icons"></script>
 
-   
 </head>
 <body class="flex flex-col gap-0 bg-Twhite text-black w-[100vw]">  
-    <nav class="bg-Bpurple h-[100px] w-[100%] text-white flex items-center justify-around font-playfair px-[50px]">
+    <nav class="bg-Bpurple h-[100px] w-[100%] text-white flex items-center justify-between font-playfair px-[50px]">
         <div class="h-[auto] w-[140px]">
             <a href="index.html"><img src="/Images/QRide logo.png" alt="logo"></a>
         </div>
-        <div class="flex flex-row flex-wrap flex-grow max-w-[700px] justify-between mx-12 lg:flex max-sm:hidden">
-            <a href="index.html"><div class="flex flex-col items-center"><i data-feather="home" class="size-6"></i>Home</div></a>
-            <a href="navig.html"><div class="flex flex-col items-center"><i data-feather="map" class="size-6"></i>Navigation</div></a>
-            <a href="help.html"><div class="flex flex-col items-center"><i data-feather="cloud" class="size-6"></i>Support</div></a>
-            <div id="myBtn" class="flex flex-col items-center"><i data-feather="bell" class="size-6"></i>Notification</div>
+        <div class="hidden sm:flex flex-row flex-wrap flex-grow max-w-[700px] justify-between mx-12 lg:flex">
+            <a href="index.html" class="flex flex-col items-center"><i data-feather="home" class="size-6"></i><span>Home</span></a>
+            <a href="navig.html" class="flex flex-col items-center"><i data-feather="map" class="size-6"></i><span>Navigation</span></a>
+            <a href="help.html" class="flex flex-col items-center"><i data-feather="cloud" class="size-6"></i><span>Support</span></a>
+            <div id="myBtn" class="flex flex-col items-center"><i data-feather="bell" class="size-6"></i><span>Notification</span></div>
         </div>
-        <div>
+        <div class="flex items-center">
             <i data-feather="user" class="size-10"></i>
-        </div>
-        <div id="hamburger" class="sm:hidden">
-            <i id="toggleSidebar" data-feather="menu" class="size-6 cursor-pointer font-white text-white"></i>
+            <div id="hamburger" class="sm:hidden ml-4">
+                <i id="toggleSidebar" data-feather="menu" class="size-6 cursor-pointer font-white text-white"></i>
+            </div>
         </div>
     </nav>
     
@@ -83,41 +81,57 @@
         <button>Book Now</button>
     </div>
 <script>
+    //1.
     feather.replace()
 
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("myBtn");
-    var span = document.getElementById("close");
+    //2.
+    // Function to toggle sidebar
+    const toggleSidebar = () => {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        sidebar.classList.toggle('translate-x-full');
+        overlay.classList.toggle('hidden');
+    };
 
-    btn.onclick = function() {
-    modal.style.display = "flex";
+    // Event listener for toggling sidebar
+    document.getElementById('toggleSidebar').addEventListener('click', toggleSidebar);
+
+    // Event listener for closing sidebar when clicking outside of it
+    document.getElementById('sidebar-overlay').addEventListener('click', toggleSidebar);
+
+    // Event listener for closing sidebar when "Close" link is clicked
+    document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
+
+
+    //3.
+    // Get the button and popup elements
+    const bookNowBtn = document.getElementById('bookNowBtn');
+    const popup = document.getElementById('popup');
+    const agreeCheckbox = document.getElementById('agreeCheckbox');
+    const continueBtn = document.getElementById('continueBtn');
+
+    // Function to open the popup when the button is clicked
+    bookNowBtn.addEventListener('click', () => {
+    popup.style.display = 'block';
+    });
+
+    // Function to close the popup when the close button is clicked
+    function closePopup() {
+    popup.style.display = 'none';
     }
 
-    span.onclick = function() {
-    modal.style.display = "none";
-    }
+    // Function to handle checkbox change event
+    agreeCheckbox.addEventListener('change', () => {
+    // Enable continue button if checkbox is checked, disable it otherwise
+    continueBtn.disabled = !agreeCheckbox.checked;
+    });
 
-    window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-    }
+    // Function to handle continue button click event
+    continueBtn.addEventListener('click', () => {
+    // Redirect to a new page
+    window.location.href = 'rent.html'; // Replace 'newpage.html' with the URL of the new page
+    });
 
-    var sidebar = document.getElementById("sidebar");
-var hamburger = document.getElementById("hamburger");
-
-hamburger.onclick = function() {
-    sidebar.classList.remove("sidebar-closed");
-    sidebar.classList.add("sidebar-open");
-}
-
-window.onclick = function(event) {
-    if (event.target == sidebar) {
-        sidebar.classList.remove("sidebar-open");
-        sidebar.classList.add("sidebar-closed");
-    }
-}
-    
 </script>
 </body>
 </html>
