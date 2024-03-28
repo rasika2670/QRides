@@ -41,7 +41,10 @@ p{
 }
 
 .pop{
-    font-weight: bold; font-size: 1.1rem;
+    font-weight: bold; 
+    font-size: 1.1rem;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 .vehicle{
@@ -106,6 +109,8 @@ button:hover{
 
 #continueBtn{
     color: #22223b;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 1rem;
     position: absolute;
     bottom: 20px;
@@ -113,6 +118,7 @@ button:hover{
     background-color: #F2E9E4;
     border-radius: 4px;
 }
+
 
 @media(max-width: 600px)
 {
