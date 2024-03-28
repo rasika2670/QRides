@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200 flex items-center justify-center h-screen">
+
+<div id="myBtn" class="w-24 h-24 bg-blue-500 text-white flex items-center justify-center cursor-pointer">
+  Logo
+</div>
+
+<div id="myModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+
+  <div class="modal-content bg-white p-5 rounded shadow-lg w-full sm:w-350 lg:w-950">
+    <span id="close" class="close text-gray-500 hover:text-black cursor-pointer float-right text-2xl">×</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+<script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementById("close");
+
+btn.onclick = function() {
+  modal.style.display = "flex";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
