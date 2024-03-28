@@ -16,9 +16,9 @@ module.exports = {
         NBlue:"#4a4e69",
         Bpink:"#9a8c98",
         Blacky:"#24262b",
+        Lpurple:" #757A9D",
       }
     },
   },
   plugins: [],
 }
-
