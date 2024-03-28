@@ -13,6 +13,7 @@ module.exports = {
         Twhite:"#F2E9E4",
         Mpurple:"#39395e",
         Bsilver:"#d9d9d9",
+        NBlue:"#4a4e69",
       }
     },
   },

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRide</title>
+    <link rel="icon" href="./Images/2.png" type="image/icon type"/>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+
+</head>
+<body class="flex flex-col gap-0 bg-Twhite text-black w-[100vw]">  
+    <nav class="bg-Bpurple h-[100px] w-[100%] text-white flex items-center justify-between font-playfair px-[50px]">
+        <div class="h-[auto] w-[140px]">
+            <a href="index.html"><img src="/Images/QRide logo.png" alt="logo"></a>
+        </div>
+        <div class="hidden sm:flex flex-row flex-wrap flex-grow max-w-[700px] justify-between mx-12 lg:flex">
+            <a href="index.html" class="flex flex-col items-center"><i data-feather="home" class="size-6"></i><span>Home</span></a>
+            <a href="navig.html" class="flex flex-col items-center"><i data-feather="map" class="size-6"></i><span>Navigation</span></a>
+            <a href="help.html" class="flex flex-col items-center"><i data-feather="cloud" class="size-6"></i><span>Support</span></a>
+            <div id="myBtn" class="flex flex-col items-center"><i data-feather="bell" class="size-6"></i><span>Notification</span></div>
+        </div>
+        <div class="flex items-center">
+            <i data-feather="user" class="size-10"></i>
+            <div id="hamburger" class="sm:hidden ml-4">
+                <i id="toggleSidebar" data-feather="menu" class="size-6 cursor-pointer font-white text-white"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <ul class="py-8">
+            <li><a href="index.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Home</a></li>
+            <li><a href="navig.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Navigation</a></li>
+            <li><a href="help.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Support</a></li>
+            <li><a href="#" id="closeSidebar" class="block px-4 py-2 text-sm hover:bg-gray-800">Close</a></li>
+        </ul>
+    </div>
+    
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
+    
+    <div class="flex flex-row items-center justify-center box-border drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] w-[90%                                                                                                                                                                                                                                                                                                                                                                                                                          ]">
+        <div class="h-24 w-24 bg-slate-600 rounded-md">
+            <img src="" alt="">
+        </div>
+        <div class="flex flex-col p-5 m-3">
+            <h1>Company</h1>
+            <h4>Bike Name</h4>
+            <div class="flex gap-2">
+                <p><i class="fa-solid fa-star"></i>4.3</p> <br>
+                <p>Rs.30/hrs</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-2 w-[90%] justify-center m-auto text-black">
+        <input type="name"  placeholder="Name">
+        <input type="number"  placeholder="Phone No. ">
+        <input type="email"  placeholder="Email id">
+        <input type="address"  placeholder="Address">
+        <input type="number" placeholder="Liscence No. ">Time
+        <div class="flex gap-4 overflow-hidden">
+            <input type="text" name="name" id="" placeholder="From">
+            <input type="text" name="to" id="" placeholder="To">
+        </div>
+    </div>
+
+    <div class="cont3">
+        <h2>Price Details</h2>
+        <div>
+            <p>Total Hrs</p>
+            <p>X hrs.</p>
+        </div>
+        <div>
+            <p>Total Amount</p>
+            <p>X amt.</p>
+        </div>
+    </div>
+
+    <div class="cont4">
+        <button>Book Now</button>
+    </div>
+<script>
+    //1.
+    feather.replace()
+
+    //2.
+    // Function to toggle sidebar
+    const toggleSidebar = () => {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        sidebar.classList.toggle('translate-x-full');
+        overlay.classList.toggle('hidden');
+    };
+
+    // Event listener for toggling sidebar
+    document.getElementById('toggleSidebar').addEventListener('click', toggleSidebar);
+
+    // Event listener for closing sidebar when clicking outside of it
+    document.getElementById('sidebar-overlay').addEventListener('click', toggleSidebar);
+
+    // Event listener for closing sidebar when "Close" link is clicked
+    document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
+
+
+    //3.
+    // Get the button and popup elements
+    const bookNowBtn = document.getElementById('bookNowBtn');
+    const popup = document.getElementById('popup');
+    const agreeCheckbox = document.getElementById('agreeCheckbox');
+    const continueBtn = document.getElementById('continueBtn');
+
+    // Function to open the popup when the button is clicked
+    bookNowBtn.addEventListener('click', () => {
+    popup.style.display = 'block';
+    });
+
+    // Function to close the popup when the close button is clicked
+    function closePopup() {
+    popup.style.display = 'none';
+    }
+
+    // Function to handle checkbox change event
+    agreeCheckbox.addEventListener('change', () => {
+    // Enable continue button if checkbox is checked, disable it otherwise
+    continueBtn.disabled = !agreeCheckbox.checked;
+    });
+
+    // Function to handle continue button click event
+    continueBtn.addEventListener('click', () => {
+    // Redirect to a new page
+    window.location.href = 'rent.html'; // Replace 'newpage.html' with the URL of the new page
+    });
+
+</script>
+</body>
+</html>
