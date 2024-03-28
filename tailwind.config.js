@@ -14,6 +14,8 @@ module.exports = {
         Mpurple:"#39395e",
         Bsilver:"#d9d9d9",
         NBlue:"#4a4e69",
+        Bpink:"#9a8c98",
+        Blacky:"#24262b",
       }
     },
   },
