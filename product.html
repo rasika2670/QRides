@@ -5,23 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link rel="stylesheet" href="product.css">
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik&display=swap">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body class="flex flex-col gap-0 bg-Twhite text-white w-[100vw]">
     <header>
-        <div class="navbar">
-            <div class="back-icon">
+        <div class="bg-Bpurple h-[60px] flex items-center justify-center">
+            <div class="absolute left-5 text-2xl">
                 <a href="rent.html">
-                    <i class="fa-solid fa-arrow-left"></i>
+                    <i class="fa-solid fa-arrow-left" style="color: #f2e9e4;"></i>
                 </a>
             </div>
-            <img src="Images/logo.jpg" style="height: 60px;">
-            <p class="vr">
+            <a href="index.html"><img src="Images/logo.jpg" style="height: 60px;"></a>
+            <p class="absolute right-2 text-sm top-10 pr-1 font-poppins text-Twhite">
                 Vehicle Rental
             </p>
         </div>
@@ -99,15 +96,41 @@
             </div>        
         </div>     
         
-        <div>
-            <p style="font-size: 1.2rem; margin-top: 1.5rem;">Reviews</p>
-        </div>
     </main>
 
     <footer>
         <div class="foot"></div>
     </footer>
 
-    <script src="popup.js"></script>
+    <script >
+        // Get the button and popup elements
+        const bookNowBtn = document.getElementById('bookNowBtn');
+        const popup = document.getElementById('popup');
+        const agreeCheckbox = document.getElementById('agreeCheckbox');
+        const continueBtn = document.getElementById('continueBtn');
+
+        // Function to open the popup when the button is clicked
+        bookNowBtn.addEventListener('click', () => {
+        popup.style.display = 'block';
+        });
+
+        // Function to close the popup when the close button is clicked
+        function closePopup() {
+        popup.style.display = 'none';
+        }
+
+        // Function to handle checkbox change event
+        agreeCheckbox.addEventListener('change', () => {
+        // Enable continue button if checkbox is checked, disable it otherwise
+        continueBtn.disabled = !agreeCheckbox.checked;
+        });
+
+        // Function to handle continue button click event
+        continueBtn.addEventListener('click', () => {
+        // Redirect to a new page
+        window.location.href = 'page4.html'; // Replace 'newpage.html' with the URL of the new page
+        });
+
+    </script>
 </body>
 </html>

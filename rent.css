@@ -38,7 +38,8 @@
     display: flex;
     position: relative;
 }
-.info p{
+
+p{
     color: #22223b;
     font-family: 'Rubik', sans-serif;
     margin: 4px;

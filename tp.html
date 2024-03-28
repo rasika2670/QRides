@@ -1,5 +1,42 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
+<body>
+
+<h2>Image Slideshow</h2>
+
+<div id="imgSlide">
+  <img src="/Images/6.pngg" style="width:100%">
+  <img src="/Images/5.png" style="width:100%">
+  <img src="/Images/7.png" style="width:100%">
+</div>
+
+<button onclick="plusDivs(-1)">Previous</button>
+<button onclick="plusDivs(1)">Next</button>
+
+<script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementById("imgSlide").getElementsByTagName("img");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex-1].style.display = "block";  
+  }
+</script>
+
+</body>
+</html> 
+=======
 <head>
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
@@ -40,3 +77,4 @@ window.onclick = function(event) {
 
 </body>
 </html>
+>>>>>>> 578240e15745b34fdaab0c73f0087d27d7b54797
