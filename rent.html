@@ -5,26 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rent</title>
     <link rel="stylesheet" href="rent.css">
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik&display=swap">
 </head>
 
-<body>
+<body class="flex flex-col gap-0 bg-Twhite text-white w-[100vw]">
     <header>
-        <div class="navbar">
-            <div class="back-icon">
-                <a href="home.html">
-                    <i class="fa-solid fa-arrow-left"></i>
+        <div class="bg-Bpurple h-[60px] flex items-center justify-center">
+            <div class="absolute left-5 text-2xl">
+                <a href="index.html">
+                    <i class="fa-solid fa-arrow-left" style="color: #f2e9e4;"></i>
                 </a>
             </div>
-            <img src="Images/logo.jpg" style="height: 60px;">
-            <p class="vr">Vehicle Rental</p>
+            <a href="index.html"><img src="Images/logo.jpg" style="height: 60px;"></a>
+            <p class="absolute right-2 text-sm top-10 pr-1 font-poppins text-Twhite">
+                Vehicle Rental
+            </p>
         </div>
     </header>
-
     <p class="rent">Rent</p>   
     <div class="search">
         <select class="search-select">
@@ -34,9 +32,13 @@
 
     <div class="main">
         <div class="info">
-            <div class="img" style="background-image: url('blue\ bike.jpeg');"></div>
+            <div class="img overflow-hidden">
+                <a href="product.html">
+                    <img src="Images/bg.jpg" class="object-cover">
+                </a>
+            </div>
             <div class="content">
-                <p class="pop">Company</p>
+                <p class="company-name">Company</p>
                 <p class="bike-name">Bike name</p>
                 <p class="price" style="font-size: 0.8rem;">30rs per hour</p>    
                 <div class="pr">
@@ -83,8 +85,127 @@
         </div>
     </div>
 
-    <footer>
-        <div class="foot"></div>
-    </footer>
+    
+  <footer class="footer">
+    <div class="container">
+        <div class="row ">
+            <div class="footer-col ">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul class="list-none">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">CAR status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    
+    .container{
+        max-width: 1170px;
+        margin:auto;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul{
+        list-style: none;
+    }
+    .footer{
+        background-color: #22223b;
+        padding: 70px 0;
+        margin-top: 50px;
+    }
+    .footer-col{
+    width: 25%;
+    padding: 0 15px;
+    }
+    .footer-col h4{
+        font-size: 18px;
+        color: #f2e9e4;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+    }
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left:0;
+        bottom: -10px;
+        background-color: #9a8c98;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+    }
+    .footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #f2e9e4;
+        text-decoration: none;
+        font-weight: 300;
+        color: #9a8c98;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color: #f2e9e4;
+        padding-left: 8px;
+    }
+    .footer-col .social-links a{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255,255,255,0.2);
+        margin:0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #f2e9e4;
+        transition: all 0.5s ease;
+    }
+    .footer-col .social-links a:hover{
+        color: #24262b;
+        background-color: #f2e9e4;
+    }
+
+    @media(max-width: 767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    }
+    @media(max-width: 574px){
+    .footer-col{
+        width: 100%;
+    }
+    }
+
+</style>
 </body>
 </html>
