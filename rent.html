@@ -11,43 +11,43 @@
 </head>
 
 <body class="flex flex-col gap-0 bg-Twhite text-Bpurple w-[100vw] font-rubik">
-<header>
-    <nav class="bg-Bpurple w-[100%] text-Twhite flex items-center justify-between font-rubik px-[10px] sm:h-[100px] lg:h-[60px]">
-        <div class="block sm:hidden">
-            <a href="javascript:history.back()"><i data-feather="arrow-left"></i></a>
+    <header class="flex h-14 bg-Bpurple text-Twhite items-center justify-between px-8">
+        <div class="flex items-center sm:justify-end ">
+            <img src="Images/logo.jpg" class="h-14 mr-4">
+            <ul class="items-center justify-evenly hidden sm:flex">
+                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all duration-200 relative group w-full h-full">
+                    <a href="#" class="m-4">Home</a>
+                    <div class="absolute bottom-0 w-full h-1 bg-Lpurple
+                    hidden group-hover:block"></div>
+                </li>
+                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
+                duration-200 relative group w-full h-full">
+                    <a href="#" class="m-4">Navigation</a>
+                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
+                    hidden group-hover:block"></div>
+                </li>
+                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
+                duration-200 relative group w-full h-full">
+                    <a href="#" class="text-center m-4">Help</a>
+                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
+                    hidden group-hover:block"></div>
+                </li>
+                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
+                duration-200 relative group w-full h-full">
+                    <a href="#" class="text-center m-4">Notifications</a>
+                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
+                    hidden group-hover:block"></div>
+                </li>
+                
+            </ul>
         </div>
-        <div class="h-[auto] ">
-            <a href="index.html"><img src="/Images/logo.jpg" style="height: 60px;" alt="logo"></a>
+        <div class="h-8 w-8 items-end justify-center rounded-[50%] overflow-hidden hidden sm:flex " style="border: 2px solid;">
+            <i class="fa-solid fa-user text-2xl m-[-1px]"></i>
         </div>
-        <div class="hidden sm:flex flex-row flex-wrap flex-grow max-w-[700px] justify-between mx-12 lg:flex">
-            <a href="index.html" class="flex flex-col items-center"><i data-feather="home" class="size-6"></i><span>Home</span></a>
-            <a href="navig.html" class="flex flex-col items-center"><i data-feather="map" class="size-6"></i><span>Navigation</span></a>
-            <a href="help.html" class="flex flex-col items-center"><i data-feather="cloud" class="size-6"></i><span>Support</span></a>
-            <div id="myBtn" class="flex flex-col items-center"><i data-feather="bell" class="size-6"></i><span>Notification</span></div>
-            
+        <div id="toggleSidebar" class="h-8 w-8 items-end justify-center flex sm:hidden ">
+            <i class="fa-solid fa-bars text-2xl m-[-1px]"></i>
         </div>
-        <i data-feather="user" class="size-10 relative left-3 mx-6 my-2 hidden sm:block"></i>
-
-        <div class="flex items-center">
-            <div id="hamburger" class="sm:hidden ml-4">
-                <i id="toggleSidebar" data-feather="menu" class="size-6 cursor-pointer font-white text-Twhite"></i>
-            </div>
-        </div>
-    </nav>
-
-    <!-- sidebar -->
-    <div id="sidebar" class="bg-gray-900 text-Twhite h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
-        <ul class="py-8">
-            <li><a href="index.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Home</a></li>
-            <li><a href="navig.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Navigation</a></li>
-            <li><a href="help.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Support</a></li>
-            <li><a href="#" id="closeSidebar" class="block px-4 py-2 text-sm hover:bg-gray-800">Close</a></li>
-            <i data-feather="user" class="size-10 relative left-3 mx-6 my-2"></i>
-
-        </ul>
-    </div>
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
-</header>    
+    </header>
 <main>
     <p class="m-4 text-xl font-semibold">Rent</p>
     <div class="search">

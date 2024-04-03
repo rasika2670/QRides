@@ -8,12 +8,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body class="flex flex-col gap-0 bg-Twhite text-Bpurple w-[100vw] font-rubik">  
-    <header>
-        <div class="bg-Bpurple h-[60px] flex items-center justify-center">
-            <a href="#"><img src="Images/logo.jpg" style="height: 60px;"></a>
-            <p class="absolute right-2 text-sm top-10 pr-1 font-poppins text-Twhite">
-                Vehicle Rental
-            </p>
+    <header class="flex h-14 bg-Bpurple text-Twhite items-center justify-between px-8">
+        <div class="flex items-center sm:justify-end ">
+            <img src="Images/logo.jpg" class="h-14 mr-4">
+            <ul class="items-center justify-evenly hidden sm:flex">
+                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all duration-200 relative group w-full h-full">
+                    <a href="#" class="m-4">Home</a>
+                    <div class="absolute bottom-0 w-full h-1 bg-Lpurple
+                    hidden group-hover:block"></div>
+                </li>
+                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
+                duration-200 relative group w-full h-full">
+                    <a href="#" class="m-4">Navigation</a>
+                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
+                    hidden group-hover:block"></div>
+                </li>
+                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
+                duration-200 relative group w-full h-full">
+                    <a href="#" class="text-center m-4">Help</a>
+                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
+                    hidden group-hover:block"></div>
+                </li>
+                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
+                duration-200 relative group w-full h-full">
+                    <a href="#" class="text-center m-4">Notifications</a>
+                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
+                    hidden group-hover:block"></div>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="h-8 w-8 items-end justify-center rounded-[50%] overflow-hidden hidden sm:flex " style="border: 2px solid;">
+            <i class="fa-solid fa-user text-2xl m-[-1px]"></i>
+        </div>
+        <div id="toggleSidebar" class="h-8 w-8 items-end justify-center flex sm:hidden ">
+            <i class="fa-solid fa-bars text-2xl m-[-1px]"></i>
+        </div>
     </header>
 
 <main class="flex flex-col items-center sm:items-start sm:justify-evenly sm:flex-row">
