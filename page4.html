@@ -47,6 +47,17 @@
             <i class="fa-solid fa-bars text-2xl m-[-1px]"></i>
         </div>
     </header>
+    <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <ul class="py-8">
+            <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-800">Profile</a></li>
+            <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-800">Home</a></li>
+            <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-800">Navigation</a></li>
+            <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-800">Help</a></li>
+            <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-800">Notifications</a></li>
+            <li><a href="#" id="closeSidebar" class="block px-4 py-2 text-sm hover:bg-gray-800">Close</a></li>
+        </ul>
+    </div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
 
     <div class="flex w-[100%] flex-col justify-center lg:flex-row px-4">
         <div class=" flex my-12 mx-auto flex-col ">
@@ -162,7 +173,10 @@
                         <p class="font-bold text-lg mx-1">8:00 am to 3:00 pm</p>
                     </div>
                 </div>
-                <button onclick="location.href='payment.html'" class="bg-Bpurple text-Twhite text-[1.3rem] m-6 relative self-center h-[30px] w-[200px] rounded-2xl cursor-pointer hover:opacity-80 transition-all duration-200">Done</button>
+                <button onclick="location.href='payment.html'" class="bg-Bpurple text-Twhite text-[1.3rem] m-6 relative 
+                self-center h-[30px] w-[200px] rounded-2xl cursor-pointer hover:opacity-80 transition-all duration-200">
+                    Done
+                </button>
             </div>
         </div>  
     </div>
@@ -222,36 +236,6 @@
 
     // Event listener for closing sidebar when "Close" link is clicked
     document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
-
-
-    //3.
-    // Get the button and popup elements
-    const bookNowBtn = document.getElementById('bookNowBtn');
-    const popup = document.getElementById('popup');
-    const agreeCheckbox = document.getElementById('agreeCheckbox');
-    const continueBtn = document.getElementById('continueBtn');
-
-    // Function to open the popup when the button is clicked
-    bookNowBtn.addEventListener('click', () => {
-    popup.style.display = 'block';
-    });
-
-    // Function to close the popup when the close button is clicked
-    function closePopup() {
-    popup.style.display = 'none';
-    }
-
-    // Function to handle checkbox change event
-    agreeCheckbox.addEventListener('change', () => {
-    // Enable continue button if checkbox is checked, disable it otherwise
-    continueBtn.disabled = !agreeCheckbox.checked;
-    });
-
-    // Function to handle continue button click event
-    continueBtn.addEventListener('click', () => {
-    // Redirect to a new page
-    window.location.href = 'rent.html'; // Replace 'newpage.html' with the URL of the new page
-    });
 
     //4.
     document.getElementById('userRole').addEventListener('change', function() {
