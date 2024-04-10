@@ -13,36 +13,9 @@
 
 </head>
 <body class="flex flex-col gap-0 bg-Twhite text-Bpurple w-[100vw] font-rubik">  
-    <header class="flex h-14 bg-Bpurple text-Twhite items-center justify-between px-8">
-        <div class="flex items-center sm:justify-end ">
-            <a href="index.html">
-                <img src="Images/logo.jpg" class="h-14 mr-4">
-            </a>
-            <ul class="items-center justify-evenly hidden sm:flex">
-                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all duration-200 relative group w-full h-full">
-                    <a href="#" class="m-4">Home</a>
-                    <div class="absolute bottom-0 w-full h-1 bg-Lpurple
-                    hidden group-hover:block"></div>
-                </li>
-                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
-                duration-200 relative group w-full h-full">
-                    <a href="#" class="m-4">Navigation</a>
-                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
-                    hidden group-hover:block"></div>
-                </li>
-                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
-                duration-200 relative group w-full h-full">
-                    <a href="#" class="text-center m-4">Help</a>
-                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
-                    hidden group-hover:block"></div>
-                </li>
-                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
-                duration-200 relative group w-full h-full">
-                    <a href="#" class="text-center m-4">Notifications</a>
-                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
-                    hidden group-hover:block"></div>
-                </li>       
-            </ul>
+     <nav class="bg-Bpurple w-[100%] text-Twhite flex items-center justify-between font-rubik px-[50px] sm:h-[80px] lg:h-[60px]">
+        <div class="block sm:hidden">
+            <a href="javascript:history.back()"><i data-feather="arrow-left"></i></a>
         </div>
         <div class="h-[auto] ">
             <a href="index.html"><img src="/Images/logo.jpg" style="height: 60px;" alt="logo"></a>
@@ -64,6 +37,18 @@
     </nav>
     
     <!-- sidebar -->
+    <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <ul class="py-8">
+            <li><a href="index.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Home</a></li>
+            <li><a href="navig.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Navigation</a></li>
+            <li><a href="help.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Support</a></li>
+            <li><a href="#" id="closeSidebar" class="block px-4 py-2 text-sm hover:bg-gray-800">Close</a></li>
+            <li><a href="login.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Profile</a></li>
+
+        </ul>
+    </div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
+
     <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
         <ul class="py-8">
             <li><a href="index.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Home</a></li>
