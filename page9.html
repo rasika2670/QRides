@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRide</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body class="flex flex-col gap-0 bg-Twhite text-black w-[100vw]">  
+    <nav class="bg-Bpurple w-[100%] text-Twhite flex items-center justify-between font-rubik px-[50px] sm:h-[100px] lg:h-[60px]">
+        <div class="block sm:hidden">
+            <a href="javascript:history.back()"><i data-feather="arrow-left"></i></a>
+        </div>
+        <div class="h-[auto] ">
+            <a href="index.html"><img src="/Images/logo.jpg" style="height: 60px;" alt="logo"></a>
+        </div>
+        <div class="hidden sm:flex flex-row flex-wrap flex-grow max-w-[700px] justify-between mx-12 lg:flex">
+            <a href="index.html" class="flex flex-col items-center"><i data-feather="home" class="size-6"></i><span>Home</span></a>
+            <a href="navig.html" class="flex flex-col items-center"><i data-feather="map" class="size-6"></i><span>Navigation</span></a>
+            <a href="help.html" class="flex flex-col items-center"><i data-feather="cloud" class="size-6"></i><span>Support</span></a>
+            <div id="myBtn" class="flex flex-col items-center"><i data-feather="bell" class="size-6"></i><span>Notification</span></div>
+            
+        </div>
+        <i data-feather="user" class="size-10 relative left-3 mx-6 my-2 hidden sm:block"></i>
+
+        <div class="flex items-center">
+            <div id="hamburger" class="sm:hidden ml-4">
+                <i id="toggleSidebar" data-feather="menu" class="size-6 cursor-pointer font-white text-white"></i>
+            </div>
+        </div>
+    </nav>
+     <!-- sidebar -->
+     <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <ul class="py-8">
+            <li><a href="index.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Home</a></li>
+            <li><a href="navig.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Navigation</a></li>
+            <li><a href="help.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Support</a></li>
+            <li><a href="#" id="closeSidebar" class="block px-4 py-2 text-sm hover:bg-gray-800">Close</a></li>
+            <i data-feather="user" class="size-10 relative left-3 mx-6 my-2"></i>
+
+        </ul>
+    </div>
+   <!-- <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden">-->
+    <div class="flex justify-center items-center h-screen">
+        <div class="rounded-lg border border-gray-300 bg-white p-4">
+          <img src="Images/thanks-1.png" alt="Thank you" width="450" height="450" class="rounded-lg mt-8 mb-8">
+        </div>
+      </div>
+
+
+
+
+    <footer class="bg-Bpurple py-[70px] mt-[50px]">
+        <div class="max-w-[1170px] m-auto ">
+            <div class="flex flex-col justify-center sm:flex-row ml-[1rem] ">
+                <div class="w-[50%] py-[15px] sm:w-[25%]">
+                    <h4 class=" text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-Bpink max-w-[50px]">company</h4>
+                    <ul class="space-y-2 ">
+                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">about us</a></li>
+                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">our services</a></li>
+                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">privacy policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="w-[50%] py-[15px] sm:w-[25%]">
+                    <h4 class=" text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-Bpink max-w-[50px]	"> <pre class="font-poppins font-medium">Get Help</pre></h4>
+                    <ul class="list-none space-y-2">
+                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">returns</a></li>
+                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">CAR status</a></li>
+                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">payment options</a></li>
+                    </ul>
+                </div>
+                
+                <div class="w-[50%] py-[15px] sm:w-[25%]">
+                    <h4 class="text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-Bpink max-w-[50px] "><pre class="font-poppins font-medium">Follow Us</pre></h4>
+                    <div class="flex gap-2 flex-wrap">
+                        <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        //1.
+        feather.replace()
+         //2.
+    // Function to toggle sidebar
+    const toggleSidebar = () => {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        sidebar.classList.toggle('translate-x-full');
+        overlay.classList.toggle('hidden');
+    };
+
+    // Event listener for toggling sidebar
+    document.getElementById('toggleSidebar').addEventListener('click', toggleSidebar);
+
+    // Event listener for closing sidebar when clicking outside of it
+    document.getElementById('sidebar-overlay').addEventListener('click', toggleSidebar);
+
+    // Event listener for closing sidebar when "Close" link is clicked
+    document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
+
+
+    //3.
+    // Get the button and popup elements
+    const bookNowBtn = document.getElementById('bookNowBtn');
+    const popup = document.getElementById('popup');
+    const agreeCheckbox = document.getElementById('agreeCheckbox');
+    const continueBtn = document.getElementById('continueBtn');
+
+    // Function to open the popup when the button is clicked
+    bookNowBtn.addEventListener('click', () => {
+    popup.style.display = 'block';
+    });
+
+    // Function to close the popup when the close button is clicked
+    function closePopup() {
+    popup.style.display = 'none';
+    }
+
+    // Function to handle checkbox change event
+    agreeCheckbox.addEventListener('change', () => {
+    // Enable continue button if checkbox is checked, disable it otherwise
+    continueBtn.disabled = !agreeCheckbox.checked;
+    });
+
+    // Function to handle continue button click event
+    continueBtn.addEventListener('click', () => {
+    // Redirect to a new page
+    window.location.href = 'rent.html'; // Replace 'newpage.html' with the URL of the new page
+    });
+
+    //4.
+    document.getElementById('userRole').addEventListener('change', function() {
+        var selectedValue = this.value;
+        var errorMessage = document.getElementById('errorMessage');
+
+        if (selectedValue === 'other') {
+            errorMessage.classList.remove('hidden');
+            this.setCustomValidity('Access denied for "Other" users.');
+        } else {
+            errorMessage.classList.add('hidden');
+            this.setCustomValidity('');
+        }
+    });
+
+    </script>
+    </body>
+    </html>
