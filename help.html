@@ -4,45 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QRide</title>
-    <link rel="icon" href="./Images/2.png" type="image/icon type"/>
     <link rel="stylesheet" href="./tailwind/output.css" />
     <link rel="stylesheet" href="main.css" />    
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-
 </head>
+
 <body class="flex flex-col gap-0 bg-Twhite text-Bpurple w-[100vw] font-rubik">  
-    <header class="flex h-14 bg-Bpurple text-Twhite items-center justify-between px-8">
-        <div class="flex items-center sm:justify-end ">
-            <a href="index.html">
-                <img src="Images/logo.jpg" class="h-14 mr-4">
-            </a>
-            <ul class="items-center justify-evenly hidden sm:flex">
-                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all duration-200 relative group w-full h-full">
-                    <a href="#" class="m-4">Home</a>
-                    <div class="absolute bottom-0 w-full h-1 bg-Lpurple
-                    hidden group-hover:block"></div>
-                </li>
-                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
-                duration-200 relative group w-full h-full">
-                    <a href="#" class="m-4">Navigation</a>
-                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
-                    hidden group-hover:block"></div>
-                </li>
-                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
-                duration-200 relative group w-full h-full">
-                    <a href="#" class="text-center m-4">Help</a>
-                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
-                    hidden group-hover:block"></div>
-                </li>
-                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
-                duration-200 relative group w-full h-full">
-                    <a href="#" class="text-center m-4">Notifications</a>
-                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
-                    hidden group-hover:block"></div>
-                </li>       
-            </ul>
+    <nav class="bg-Bpurple w-[100%] text-Twhite flex items-center justify-between font-rubik px-[50px] sm:h-[80px] lg:h-[60px]">
+        <div class="block sm:hidden">
+            <a href="javascript:history.back()"><i data-feather="arrow-left"></i></a>
         </div>
         <div class="h-[auto] ">
             <a href="index.html"><img src="/Images/logo.jpg" style="height: 60px;" alt="logo"></a>
@@ -62,9 +33,8 @@
             </div>
         </div>
     </nav>
-    
-    <!-- sidebar -->
-    <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+      <!-- sidebar -->
+      <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
         <ul class="py-8">
             <li><a href="index.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Home</a></li>
             <li><a href="navig.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Navigation</a></li>
@@ -74,59 +44,46 @@
 
         </ul>
     </div>
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
 
-    <p class="mx-4 mt-2 text-xl font-semibold">Lend</p>
-    <div class="flex flex-row items-center justify-evenly box-border drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] w-[90%]">
-        <div class="h-24 w-24 bg-slate-600 rounded-md">
-            <img src="" alt="">
-        </div>
-        <div class="flex flex-col p-5 m-3 w-[50%]">
-            <input type="text" name="" id="" class="bg-transparent placeholder:text-Bpurple" placeholder="Company">
-            <input type="text" name="" id="" class="bg-transparent placeholder:text-Bpurple" placeholder="Bike Name">
-            <div class="flex gap-2">
-                <!-- <p><i class="fa-solid fa-star"></i>4.3</p> <br> -->
-                Mileage:
-                <input type="text" name="Milage" class="max-w-[100px]" id="" placeholder="45kmph">
-            </div>
-        </div>
+<div class=" my-0 mx-auto flex flex-col min-w-[45%] sm:my-12">
+    <div class="flex flex-col gap-2 w-[90%] text-center ">
+        <h2 class="text-3xl font-bold" >How can we help you?</h2>
+        <form action="#" method="post" >
+                <div class="my-4">
+                    <label for="company-name" class="block font-semibold">
+                    </label>
+                    <input type="text" id="user-name" name="user-name" placeholder="Enter your name" class="w-full px-3 py-2 border rounded-md 
+                    focus:outline-none focus:border-Bpurple drop-shadow" required>
+                </div> 
+                <div class="my-4">
+                    <label for="email" class="block font-semibold">
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email ID" class="w-full px-3 py-2 border rounded-md 
+                    focus:outline-none focus:border-Bpurple drop-shadow" required>
+                </div>  
+                <div class="my-4">
+                    <label for="phoneno" class="block font-semibold">
+                    </label>
+                    <input type="tel" id="phoneno" name="phoneno" placeholder="Enter your phone number " class="w-full px-3 py-2 border rounded-md 
+                    focus:outline-none focus:border-Bpurple drop-shadow" required>
+                </div>  
+                <div class="my-4">
+                    <label for="comment" class="block font-semibold">
+                    </label>
+                    <textarea type="comment" id="comment" name="comment" placeholder="Enter your comments or describe your problem " class="w-full px-3 py-2 border rounded-md 
+                    focus:outline-none focus:border-Bpurple drop-shadow" required></textarea>
+                </div>   
+                <div>
+                    <button  class="bg-Bpurple text-Twhite text-[1.3rem] m-6 relative 
+                self-center h-[30px] w-[200px] rounded-2xl cursor-pointer hover:opacity-80 transition-all duration-200">
+                    Submit
+                </button>
+                </div>     
+        </form>
     </div>
 
-    <div class="flex flex-col gap-2 w-[90%] justify-center m-auto text-black">
-        <input type="name" class="text-md p-1 rounded-md capitalize drop-shadow-md border-1 shadow-slate-300  " placeholder="Your Name">
-        <input type="number" class="text-md p-1 rounded-md capitalize drop-shadow-md border-1 shadow-slate-300  " placeholder="Owner's Liscence No. ">
-        Time - Your free too leave your vehicle
-        <div class="flex justify-between gap-4 overflow-hidden">
-            <input type="text" name="name" class="text-md p-1 rounded-md capitalize drop-shadow-md border-1 shadow-slate-300 w-[48%] " id="" placeholder="From">
-            <input type="text" name="to" class="text-md p-1 rounded-md capitalize drop-shadow-md border-1 shadow-slate-300 w-[48%] " id="" placeholder="To">
-        </div>
-        <input type="number" name="Vehicle No." class="text-md p-1 rounded-md capitalize drop-shadow-md border-1 shadow-slate-300  " id="" placeholder=" Vehicle No.">
-        Contact Details
-        <input type="number" class="text-md p-1 rounded-md capitalize drop-shadow-md border-1 shadow-slate-300  " placeholder="Phone No. ">
-        <input type="email" class="text-md p-1 rounded-md capitalize drop-shadow-md border-1 shadow-slate-300  " placeholder="Email id">
-        <input type="address" class="text-md p-1 rounded-md capitalize drop-shadow-md border-1 shadow-slate-300  " placeholder="Address">
-        Add 2 Images of your Vehicle (To verify that its not damage condition if any).
-        <input type="file" name="images" id="" class="my-2">
-    </div>
+</div>
 
-    <div class="hidden">
-        <h2>Price Details</h2>
-        <div>
-            <p>Total Hrs</p>
-            <p>X hrs.</p>
-        </div>
-        <div>
-            <p>Total Amount</p>
-            <p>X amt.</p>
-        </div>
-    </div>
-        
-    <div class="flex w-[100%] justify-center items-center">
-        <a href="/Images/thanks-1.png">
-        <button class="bg-Bpurple p-1 text-Twhite text-xl rounded-3xl capitalize w-[220px] mt-4">Done</button>
-        </a>
-    </div>
-    
     <footer class="bg-Bpurple py-[70px] mt-[50px]">
         <div class="max-w-[1170px] m-auto ">
             <div class="flex flex-wrap justify-center sm:flex-row ml-[1rem] ">
@@ -183,6 +140,19 @@
     // Event listener for closing sidebar when "Close" link is clicked
     document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
 
+    //4.
+    document.getElementById('userRole').addEventListener('change', function() {
+        var selectedValue = this.value;
+        var errorMessage = document.getElementById('errorMessage');
+
+        if (selectedValue === 'other') {
+            errorMessage.classList.remove('hidden');
+            this.setCustomValidity('Access denied for "Other" users.');
+        } else {
+            errorMessage.classList.add('hidden');
+            this.setCustomValidity('');
+        }
+    });
 </script>
 </body>
 </html>
