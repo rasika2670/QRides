@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QRide</title>
-    <link rel="icon" href="./Images/2.png" type="image/icon type"/>
+    <title>Rent</title>
+    <link rel="stylesheet" href="rent.css">
     <link rel="stylesheet" href="./tailwind/output.css" />
     <link rel="stylesheet" href="main.css" />    
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
-<body class="flex flex-col gap-0 bg-Twhite text-Bpurple w-[100vw] font-rubik">  
+<body class="flex flex-col gap-0 bg-Twhite text-Bpurple w-[100vw] font-rubik">
     <nav class="bg-Bpurple w-[100%] text-Twhite flex items-center justify-between font-rubik px-[50px] sm:h-[80px] lg:h-[60px]">
         <div class="block sm:hidden">
             <a href="javascript:history.back()"><i data-feather="arrow-left"></i></a>
@@ -34,8 +34,9 @@
             </div>
         </div>
     </nav>
-      <!-- sidebar -->
-      <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+    
+    <!-- sidebar -->
+    <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
         <ul class="py-8">
             <li><a href="index.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Home</a></li>
             <li><a href="navig.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Navigation</a></li>
@@ -45,46 +46,15 @@
 
         </ul>
     </div>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
 
-<div class=" my-0 mx-auto flex flex-col min-w-[45%] sm:my-12">
-    <div class="flex flex-col gap-2 w-[90%] text-center ">
-        <h2 class="text-2xl font-bold" >Customer details</h2>
-        <form action="#" method="post" >
-                <div class="my-4">
-                    <label for="cust-name" class="block font-semibold">
-                    </label>
-                    <input type="text" id="user-name" name="user-name" placeholder="Enter your name" class="w-full px-3 py-2 border rounded-md 
-                    focus:outline-none focus:border-Bpurple drop-shadow" required>
-                </div> 
-                <div class="my-4">
-                    <label for="email" class="block font-semibold">
-                    </label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email ID" class="w-full px-3 py-2 border rounded-md 
-                    focus:outline-none focus:border-Bpurple drop-shadow" required>
-                </div>  
-                <div class="my-4">
-                    <label for="phoneno" class="block font-semibold">
-                    </label>
-                    <input type="tel" id="phoneno" name="phoneno" placeholder="Enter your phone number " class="w-full px-3 py-2 border rounded-md 
-                    focus:outline-none focus:border-Bpurple drop-shadow" required>
-                </div>  
-                <div class="my-4">
-                    <label for="comment" class="block font-semibold">
-                    </label>
-                    <textarea type="comment" id="comment" name="comment" placeholder="Enter your comments or describe your problem " class="w-full px-3 py-2 border rounded-md 
-                    focus:outline-none focus:border-Bpurple drop-shadow" required></textarea>
-                </div>   
-                <div>
-                    <button  class="bg-Bpurple text-Twhite text-[1.3rem] m-6 relative 
-                self-center h-[30px] w-[200px] rounded-2xl cursor-pointer hover:opacity-80 transition-all duration-200">
-                    Submit
-                </button>
-                </div>     
-        </form>
-    </div>
 
-</div>
+    <main class="flex flex-row justify-center items-center m-6">
+        <div class="h-[450px] w-[450px] p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa esse veniam reprehenderit a sapiente ipsa accusantium optio. Numquam perspiciatis provident non sint saepe nulla odit, eveniet voluptatibus autem laudantium, adipisci minima labore fugit optio atque? Mollitia, odio quos! Error, blanditiis libero? Nam quia laudantium sit sapiente aliquam repellat saepe. Omnis labore tempore beatae? Possimus modi totam, accusamus iusto nesciunt quasi quam sapiente mollitia autem. Ducimus ipsam voluptatum ipsum dolorem repellendus quam accusantium nihil fuga. Alias laudantium blanditiis eaque, nisi voluptate dolore quam eos autem unde cumque excepturi magnam delectus nihil recusandae sit perspiciatis voluptatem beatae necessitatibus distinctio quis amet voluptatum numquam officia suscipit. Consectetur sint totam ipsum enim ratione natus error excepturi, voluptates officiis amet adipisci laudantium voluptate maxime?</div>
+        <div class="h-[450px] w-[450px] bg-slate-600 items-center flex justify-center">MAPS-o</div>
+    </main>
 
+    
     <footer class="bg-Bpurple py-[70px] mt-[50px]">
         <div class="max-w-[1170px] m-auto ">
             <div class="flex flex-wrap justify-center sm:flex-row ml-[1rem] ">
@@ -119,41 +89,28 @@
             </div>
         </div>
     </footer>
-<script>
-    //1.
-    feather.replace()
-
-    //2.
-    // Function to toggle sidebar
-    const toggleSidebar = () => {
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('sidebar-overlay');
-        sidebar.classList.toggle('translate-x-full');
-        overlay.classList.toggle('hidden');
-    };
-
-    // Event listener for toggling sidebar
-    document.getElementById('toggleSidebar').addEventListener('click', toggleSidebar);
-
-    // Event listener for closing sidebar when clicking outside of it
-    document.getElementById('sidebar-overlay').addEventListener('click', toggleSidebar);
-
-    // Event listener for closing sidebar when "Close" link is clicked
-    document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
-
-    //4.
-    document.getElementById('userRole').addEventListener('change', function() {
-        var selectedValue = this.value;
-        var errorMessage = document.getElementById('errorMessage');
-
-        if (selectedValue === 'other') {
-            errorMessage.classList.remove('hidden');
-            this.setCustomValidity('Access denied for "Other" users.');
-        } else {
-            errorMessage.classList.add('hidden');
-            this.setCustomValidity('');
-        }
-    });
-</script>
-</body>
-</html>
+    <script>
+        //1.
+        feather.replace()
+    
+        //2.
+        // Function to toggle sidebar
+        const toggleSidebar = () => {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        };
+    
+        // Event listener for toggling sidebar
+        document.getElementById('toggleSidebar').addEventListener('click', toggleSidebar);
+    
+        // Event listener for closing sidebar when clicking outside of it
+        document.getElementById('sidebar-overlay').addEventListener('click', toggleSidebar);
+    
+        // Event listener for closing sidebar when "Close" link is clicked
+        document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
+    
+    </script>
+    </body>
+    </html>

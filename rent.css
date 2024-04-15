@@ -49,7 +49,10 @@ p{
     width: 100px;
     border: 1px solid #22223b;
     border-radius: 4px;
-    background-size:contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size:cover;
 }
 
 .content{
