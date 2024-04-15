@@ -1,0 +1,2 @@
+Use this for hosting : npx tailwindcss -i main.css  -o ./tailwind/output.css --watch
+Use this for pull request : git pull https://github.com/rasika2670/QRides.git
