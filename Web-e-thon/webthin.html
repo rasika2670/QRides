@@ -50,7 +50,7 @@
     <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
 
 
-    <main class="cards-container">
+    <main class="cards-container" id="cardsContainer">
         <form id="searchForm" onsubmit="searchRedirect(event)" class="mt-5">
             <!-- <input type="text" id="searchInput" placeholder="Search">
             <input type="submit" value="Search"> -->
@@ -196,29 +196,27 @@
     document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
 
     
-        // Retrieve the search query from the URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const searchQuery = urlParams.get('q');
-
-        // Display the search query on the page
-        if (searchQuery) {
-            const resultsContainer = document.getElementById('results');
-            resultsContainer.innerHTML = `<p>Search results for: <strong>${searchQuery}</strong></p>`;
-
-            // Search for matching cards based on the search query
+        // Function to handle form submission
+        const searchRedirect = (event) => {
+            event.preventDefault(); // Prevent form submission
+            const searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
             const cards = document.querySelectorAll('.card');
-
+    
             cards.forEach(card => {
-                const cardName = card.getAttribute('data-name').toLowerCase();
-                const cardDescription = card.textContent.toLowerCase();
-
-                if (cardName.includes(searchQuery.toLowerCase()) || cardDescription.includes(searchQuery.toLowerCase())) {
+                const cardName = card.querySelector('.name').textContent.trim().toLowerCase();
+                const cardDescription = card.querySelector('.__aboutline').textContent.trim().toLowerCase();
+    
+                if (cardName.includes(searchInput) || cardDescription.includes(searchInput)) {
                     card.style.display = 'block'; // Show matching cards
                 } else {
                     card.style.display = 'none'; // Hide non-matching cards
                 }
             });
-        }
+        };
+    
+        // Add an event listener to the search form
+        document.getElementById('searchForm').addEventListener('submit', searchRedirect);
+
     
 </script>
 </body>
