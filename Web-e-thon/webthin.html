@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeeConnect.</title>
     <link rel="stylesheet" href="./tailwind/output.css" />
-    <link rel="stylesheet" href="/main.css" />    
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="style.css">    
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
@@ -61,9 +62,35 @@
     <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
 
     <main>
-
+        <div>
+        <div class="wrapper" data-tilt>
+            <div class="img-area">
+                <div class="inner-area">
+                    <img src="./images/profile.png" alt="">
+                </div>
+            </div>
+    
+            <div class="name">Swaminathan Selvam</div>
+            <div class="about">Front End Developer 👨‍💻</div>
+            <p class="__aboutline"> A User Interface and User Experience with a love for creating designs that are
+                accessible and easy to use
+                for everyone..!</p>
+            <div class="social-icons">
+                <a href="https://codepen.io/swamithedev/" target="_blank" class="codepen"> <i
+                        class="fa-brands fa-codepen"></i>
+                    <a href="https://swamithedev.vercel.app/" target="_blank" class="website"> <i class="fa fa-link"></i>
+                        <a href="https://github.com/SwamiTheDev" target="_blank" class="github"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/swaminathanselvam/" target="_blank" class="linkedin"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:swamithedev@gmail.com" class="mail" target="_blank"><i
+                                class="fa fa-envelope"></i></a>
+    
+            </div>
+        </div>
+    </div>
     </main>
-
+    
     <footer class="bg-Bpurple py-[70px] mt-[50px]">
         <div class="max-w-[1170px] m-auto ">
             <div class="flex flex-wrap justify-center sm:flex-row ml-[1rem] ">
@@ -98,6 +125,7 @@
             </div>
         </div>
     </footer>
+    <script src="vanilla-tilt.js"></script>
 <script>
     //1.
     feather.replace()
