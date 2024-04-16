@@ -73,7 +73,7 @@
         <div class="wrapper p-4 m-4" data-tilt>
             <div class="img-area">
                 <div class="inner-area">
-                    <img src="./images/profile.png" alt="">
+                    <img src="./sam.jpg" alt="">
                 </div>
             </div>
     
@@ -98,12 +98,12 @@
         <div class="wrapper p-4 m-4" data-tilt>
             <div class="img-area">
                 <div class="inner-area">
-                    <img src="./images/profile.png" alt="">
+                    <img src="./ani.jpg" alt="">
                 </div>
             </div>
     
-            <div class="name">Swaminathan Selvam</div>
-            <div class="about">Front End Developer 👨‍💻</div>
+            <div class="name">Aniket More</div>
+            <div class="about">Full stack Developer 👨‍💻</div>
             <p class="__aboutline"> A User Interface and User Experience with a love for creating designs that are
                 accessible and easy to use
                 for everyone..!</p>
@@ -123,12 +123,12 @@
         <div class="wrapper" data-tilt>
             <div class="img-area">
                 <div class="inner-area">
-                    <img src="./images/profile.png" alt="">
+                    <img src="./ras.jpg" alt="">
                 </div>
             </div>
     
-            <div class="name">Swaminathan Selvam</div>
-            <div class="about">Front End Developer 👨‍💻</div>
+            <div class="name">Rasika Mhaske</div>
+            <div class="about">Web Developer 👨‍💻</div>
             <p class="__aboutline"> A User Interface and User Experience with a love for creating designs that are
                 accessible and easy to use
                 for everyone..!</p>
@@ -205,6 +205,31 @@
     // Event listener for closing sidebar when "Close" link is clicked
     document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
 
+    
+        // Retrieve the search query from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('q');
+
+        // Display the search query on the page
+        if (searchQuery) {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = `<p>Search results for: <strong>${searchQuery}</strong></p>`;
+
+            // Search for matching cards based on the search query
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                const cardName = card.getAttribute('data-name').toLowerCase();
+                const cardDescription = card.textContent.toLowerCase();
+
+                if (cardName.includes(searchQuery.toLowerCase()) || cardDescription.includes(searchQuery.toLowerCase())) {
+                    card.style.display = 'block'; // Show matching cards
+                } else {
+                    card.style.display = 'none'; // Hide non-matching cards
+                }
+            });
+        }
+    
 </script>
 </body>
 </html>
