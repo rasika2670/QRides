@@ -62,7 +62,64 @@
     <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
 
     <main>
-        <div>
+        <form id="searchForm" onsubmit="searchRedirect(event)">
+            <!-- <input type="text" id="searchInput" placeholder="Search">
+            <input type="submit" value="Search"> -->
+            <input type="search" class="srch" id="searchInput" placeholder="Search Here..." />
+        </form>
+        <p class="text-lg">Mentors</p>
+
+    <div class="flex justify-evenly gap-4">
+        <div class="wrapper p-4 m-4" data-tilt>
+            <div class="img-area">
+                <div class="inner-area">
+                    <img src="./images/profile.png" alt="">
+                </div>
+            </div>
+    
+            <div class="name">Swaminathan Selvam</div>
+            <div class="about">Front End Developer 👨‍💻</div>
+            <p class="__aboutline"> A User Interface and User Experience with a love for creating designs that are
+                accessible and easy to use
+                for everyone..!</p>
+            <div class="social-icons">
+                <a href="https://codepen.io/swamithedev/" target="_blank" class="codepen"> <i
+                        class="fa-brands fa-codepen"></i>
+                    <a href="https://swamithedev.vercel.app/" target="_blank" class="website"> <i class="fa fa-link"></i>
+                        <a href="https://github.com/SwamiTheDev" target="_blank" class="github"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/swaminathanselvam/" target="_blank" class="linkedin"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:swamithedev@gmail.com" class="mail" target="_blank"><i
+                                class="fa fa-envelope"></i></a>
+    
+            </div>
+        </div>
+        <div class="wrapper p-4 m-4" data-tilt>
+            <div class="img-area">
+                <div class="inner-area">
+                    <img src="./images/profile.png" alt="">
+                </div>
+            </div>
+    
+            <div class="name">Swaminathan Selvam</div>
+            <div class="about">Front End Developer 👨‍💻</div>
+            <p class="__aboutline"> A User Interface and User Experience with a love for creating designs that are
+                accessible and easy to use
+                for everyone..!</p>
+            <div class="social-icons">
+                <a href="https://codepen.io/swamithedev/" target="_blank" class="codepen"> <i
+                        class="fa-brands fa-codepen"></i>
+                    <a href="https://swamithedev.vercel.app/" target="_blank" class="website"> <i class="fa fa-link"></i>
+                        <a href="https://github.com/SwamiTheDev" target="_blank" class="github"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/swaminathanselvam/" target="_blank" class="linkedin"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:swamithedev@gmail.com" class="mail" target="_blank"><i
+                                class="fa fa-envelope"></i></a>
+    
+            </div>
+        </div>
         <div class="wrapper" data-tilt>
             <div class="img-area">
                 <div class="inner-area">
@@ -91,7 +148,7 @@
     </div>
     </main>
     
-    <footer class="bg-Bpurple py-[70px] mt-[50px]">
+    <footer class="bg-Bpurple py-[70px] mt-[50px] w-[100%]">
         <div class="max-w-[1170px] m-auto ">
             <div class="flex flex-wrap justify-center sm:flex-row ml-[1rem] ">
                 <div class="w-[50%] py-[15px] sm:w-[25%]">
