@@ -57,11 +57,9 @@
     </div>
 
     <div class="main">
-        <div class="info">
+        <div class="info cursor-pointer" onclick="window.open('product.html','mywindow');">
             <div class="img overflow-hidden">
-                <a href="product.html">
-                    <img src="Images/bg.jpg" class="object-cover">
-                </a>
+                <img src="Images/bg.jpg" ">
             </div>
             <div class="content">
                 <p class="company-name">Company</p>
@@ -110,6 +108,20 @@
             </div>
         </div>
     </div>
+
+
+    <?php
+    // Include the PHP script to handle database operations
+    include 'api.php';
+
+    // Retrieve Lend data from the database
+    $lendData = getLendData();
+
+    // Display the retrieved data
+    foreach ($lendData as $data) {
+        echo "<p>{$data['company']} - {$data['bikeName']} - {$data['mileage']}</p>";
+    }
+    ?>
 </main> 
 <footer class="bg-Bpurple py-[70px] mt-[50px]">
     <div class="max-w-[1170px] m-auto ">
