@@ -50,7 +50,7 @@
     <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
 
 
-    <main>
+    <main class="cards-container">
         <form id="searchForm" onsubmit="searchRedirect(event)" class="mt-5">
             <!-- <input type="text" id="searchInput" placeholder="Search">
             <input type="submit" value="Search"> -->
@@ -59,7 +59,8 @@
         <p class="text-lg">Mentors</p>
 
     <div class="flex justify-evenly gap-4" id="mentor">
-        <div class="wrapper p-4 m-4" data-tilt>
+        
+        <div class="wrapper p-4 m-4 card" data-tilt data-name="Card 1">
             <div class="img-area">
                 <div class="inner-area">
                     <img src="./sam.jpg" alt="">
@@ -84,7 +85,7 @@
     
             </div>
         </div>
-        <div class="wrapper p-4 m-4" data-tilt>
+        <div class="wrapper p-4 m-4 card" data-tilt data-name="Card 2">
             <div class="img-area">
                 <div class="inner-area">
                     <img src="./ani.jpg" alt="">
@@ -109,7 +110,7 @@
     
             </div>
         </div>
-        <div class="wrapper" data-tilt>
+        <div class="wrapper p-4 m-4  card" data-tilt data-name="Card 3">
             <div class="img-area">
                 <div class="inner-area">
                     <img src="./ras.jpg" alt="">
