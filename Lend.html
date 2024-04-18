@@ -45,7 +45,6 @@
             <li><a href="help.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Support</a></li>
             <li><a href="#" id="closeSidebar" class="block px-4 py-2 text-sm hover:bg-gray-800">Close</a></li>
             <li><a href="login.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Profile</a></li>
-
         </ul>
     </div>
     <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
@@ -79,7 +78,7 @@
     </div>
 
 
-    <?php
+    <!-- <?php
     // Include the PHP script to handle database operations
     include 'api.php';
 
@@ -90,7 +89,7 @@
         // Note: Add your logic here to handle form submission as required
         echo "Form submitted successfully!";
     }
-    ?>
+    ?> -->
     <form action="api.php" method="post" class="flex flex-col gap-2 w-[90%] justify-center m-auto text-black">
         <input type="name" name="name" class="text-md p-1 rounded-md capitalize drop-shadow-md border-1 shadow-slate-300" placeholder="Your Name">
         <input type="number" name="license" class="text-md p-1 rounded-md capitalize drop-shadow-md border-1 shadow-slate-300" placeholder="Owner's License No.">
