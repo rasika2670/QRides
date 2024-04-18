@@ -36,6 +36,7 @@
     display: flex;
     position: relative;
     border: 0.2px solid gray;
+    margin: 1px;
 }
 
 p{
@@ -60,6 +61,7 @@ i{
     margin: 4px;
 }
 .content{
+    margin: 2px;
     padding: 0px 15px;
 }
 
@@ -74,10 +76,10 @@ i{
     font-size: 0.8rem;
 }
 
-@media(max-width: 400px)
+@media(max-width: 450px)
 {
     .info{
-        width:100%;
+        width:98%;
         align-items: center;
     }
     .main{
@@ -85,10 +87,10 @@ i{
     }
 }
 
-@media (min-width: 400px) and (max-width:700px)
+@media (min-width: 450px) and (max-width:700px)
 {
     .info{
-        width:46%;
+        width: 50%;
         align-items: center;
     }
 }
@@ -96,10 +98,10 @@ i{
 @media(min-width: 700px) and (max-width:1000px)
 {
     .info{
-        width: 31%;
+        width: 33%;
         height: 400px;
         display: flex;
-        flex-direction: column;
+        flex-wrap:wrap;
     }
     .img{
         position: relative;
@@ -112,7 +114,7 @@ i{
 @media(min-width:1000px)
 {
     .info{
-        width: 23.5%;
+        width: 24.5%;
         height: 400px;
         display: flex;
         flex-direction: column;
