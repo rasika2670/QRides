@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 1rem;
 }
 
 .search-select{
@@ -31,11 +32,11 @@
 
 .info{
     height: 110px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    margin: 5px 2px;
     padding: 5px;
     display: flex;
     position: relative;
+    border: 0.2px solid gray;
+    margin: 1px;
 }
 
 p{
@@ -47,16 +48,21 @@ p{
 .img{
     height: 100px;
     width: 100px;
+    background-color: white;
     border: 1px solid #22223b;
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-size:cover;
+    background-position: center;
 }
-
+i{
+    margin: 4px;
+}
 .content{
-    padding-left: 15px;
+    margin: 2px;
+    padding: 0px 15px;
 }
 
 .company-name{
@@ -70,18 +76,21 @@ p{
     font-size: 0.8rem;
 }
 
-@media(max-width: 400px)
+@media(max-width: 450px)
 {
     .info{
-        width:100%;
+        width:98%;
         align-items: center;
+    }
+    .main{
+        padding: 0;
     }
 }
 
-@media (min-width: 400px) and (max-width:700px)
+@media (min-width: 450px) and (max-width:700px)
 {
     .info{
-        width:46%;
+        width: 50%;
         align-items: center;
     }
 }
@@ -89,10 +98,10 @@ p{
 @media(min-width: 700px) and (max-width:1000px)
 {
     .info{
-        width: 31%;
+        width: 33%;
         height: 400px;
         display: flex;
-        flex-direction: column;
+        flex-wrap:wrap;
     }
     .img{
         position: relative;
@@ -105,7 +114,7 @@ p{
 @media(min-width:1000px)
 {
     .info{
-        width: 23.5%;
+        width: 24.5%;
         height: 400px;
         display: flex;
         flex-direction: column;

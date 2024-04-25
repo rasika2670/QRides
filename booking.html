@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QRide</title>
-    <link rel="icon" href="./Images/2.png" type="image/icon type"/>
     <link rel="stylesheet" href="./tailwind/output.css" />
     <link rel="stylesheet" href="main.css" />    
     <script src="https://unpkg.com/feather-icons"></script>
@@ -21,7 +20,7 @@
         </div>
         <div class="hidden sm:flex flex-row flex-wrap flex-grow max-w-[700px] justify-between mx-12 lg:flex">
             <a href="index.html" class="flex flex-col items-center text-xs"><i data-feather="home" class="size-5"></i><span>Home</span></a>
-            <a href="navig.html" class="flex flex-col items-center text-xs"><i data-feather="map" class="size-5"></i><span>Navigation</span></a>
+            <a href="navig.html" class="flex flex-col items-center text-xs"><i data-feather="map" class="size-5"></i><span>Booking</span></a>
             <a href="help.html" class="flex flex-col items-center text-xs"><i data-feather="cloud" class="size-5"></i><span>Support</span></a>
             <div id="myBtn" class="flex flex-col items-center text-xs"><i data-feather="bell" class="size-5"></i><span>Notification</span></div>
             
@@ -45,45 +44,30 @@
 
         </ul>
     </div>
-
-<div class=" my-0 mx-auto flex flex-col min-w-[45%] sm:my-12">
-    <div class="flex flex-col gap-2 w-[90%] text-center ">
-        <h2 class="text-2xl font-bold" >Customer details</h2>
-        <form action="#" method="post" >
-                <div class="my-4">
-                    <label for="cust-name" class="block font-semibold">
-                    </label>
-                    <input type="text" id="user-name" name="user-name" placeholder="Enter your name" class="w-full px-3 py-2 border rounded-md 
-                    focus:outline-none focus:border-Bpurple drop-shadow" required>
-                </div> 
-                <div class="my-4">
-                    <label for="email" class="block font-semibold">
-                    </label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email ID" class="w-full px-3 py-2 border rounded-md 
-                    focus:outline-none focus:border-Bpurple drop-shadow" required>
-                </div>  
-                <div class="my-4">
-                    <label for="phoneno" class="block font-semibold">
-                    </label>
-                    <input type="tel" id="phoneno" name="phoneno" placeholder="Enter your phone number " class="w-full px-3 py-2 border rounded-md 
-                    focus:outline-none focus:border-Bpurple drop-shadow" required>
-                </div>  
-                <div class="my-4">
-                    <label for="comment" class="block font-semibold">
-                    </label>
-                    <textarea type="comment" id="comment" name="comment" placeholder="Enter your comments or describe your problem " class="w-full px-3 py-2 border rounded-md 
-                    focus:outline-none focus:border-Bpurple drop-shadow" required></textarea>
-                </div>   
-                <div>
-                    <button  class="bg-Bpurple text-Twhite text-[1.3rem] m-6 relative 
-                self-center h-[30px] w-[200px] rounded-2xl cursor-pointer hover:opacity-80 transition-all duration-200">
-                    Submit
-                </button>
-                </div>     
-        </form>
+    <div class=" my-3 mx-auto flex flex-col min-w-[45%] ">
+    <p class=" my-3 flex flex-col items-center justify-center text-s">Booking</p>
+    <hr style="height: 1px; background-color: #22223b; border: none;">
+    <h3 class=" font-bold flex flex-col items-center justify-center">Today</h3>
+    <p  style="color: 4A4E69;" class=" my-2 flex flex-col items-center justify-center">No bookings yet!</p>
+    <hr style="height: 1px; background-color: #22223b; border: none;">
+    <h3 class=" my-3 font-bold flex flex-col items-center justify-center">History</h3>
     </div>
+<main class="flex flex-col items-center sm:items-start sm:justify-evenly sm:flex-row">
+    <div class=" max-w-[500px]  lg:w-[30%]  flex flex-col items-center ">
+        <div class="w-[100%] h-110 shadow-lg m-5 mx-2 p-5 flex relative items-center bg-white rounded-lg">
+            <a href="customerdetails.html">
+                <img src="Images/bg.jpg" class="h-[100px] w-[100px] border border-solid border-gray-900 rounded-md object-cover">
+            </a>
+            <div class="pl-4">
+                <p class="font-bold text-xl">Customer Name</p>
+                <p>Date: 01-01-2024</p>
+                <p class="text-sm">Liscence no.</p>        
+            </div>
+        </div>
+</main>
 
-</div>
+
+
 
     <footer class="bg-Bpurple py-[70px] mt-[50px]">
         <div class="max-w-[1170px] m-auto ">

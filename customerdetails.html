@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QRide</title>
+    <link rel="icon" href="./Images/2.png" type="image/icon type"/>
     <link rel="stylesheet" href="./tailwind/output.css" />
-    <link rel="stylesheet" href="/main.css" />    
+    <link rel="stylesheet" href="main.css" />    
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
@@ -33,9 +34,8 @@
             </div>
         </div>
     </nav>
-    
-    <!-- sidebar -->
-    <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+      <!-- sidebar -->
+      <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
         <ul class="py-8">
             <li><a href="index.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Home</a></li>
             <li><a href="navig.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Navigation</a></li>
@@ -45,39 +45,94 @@
 
         </ul>
     </div>
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
 
-
-<div class=" my-2 mx-auto flex flex-col w-[90%] justify-center sm:w-[60%]">
-    <div class="flex flex-col gap-2 w-100vw text-center ">
-        <h2 class="text-lg font-bold" >How can we help you?</h2>
+<div class="my-2 mx-20px flex flex-col min-w-[45%] items-center">
+    <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+    <div class="flex flex-col gap-2 w-[90%]  m-auto ">
+        <h2 class="text-2xl font-bold" >Customer details</h2>
+        <h3 class="text-1xl font-bold text-left">Payment</h3>
+        <div class="text-left">
+            <button  class="bg-Bpurple text-Twhite text-[1.3rem] m-0 relative 
+        self-center h-[30px] w-[200px] rounded-2xl cursor-pointer hover:opacity-80 transition-all duration-200">
+            Done
+        </button>
+        </div>
+    </div>
+        <div class="w-[120px] h-[80px] bg-white rounded-lg flex justify-center items-center drop-shadow-md"></div>
+       
+       </div>
+       <div>
         <form action="#" method="post" >
                 <div class="my-4">
-                    <label for="company-name" class="block font-semibold">
+                    <label for="cust-name" class="block font-semibold">
                     </label>
-                    <input type="text" id="user-name" name="user-name" placeholder="Enter your name" class="w-full px-3 py-2 border rounded-md 
+                    <input type="text" id="user-name" name="user-name" placeholder="Customer Name" class="w-full px-3 py-2 border rounded-md 
+                    focus:outline-none focus:border-Bpurple drop-shadow" required>
+                </div> 
+                <div class="my-4">
+                    <label for="phoneno" class="block font-semibold">
+                    </label>
+                    <input type="tel" id="phoneno" name="phoneno" placeholder="Phone number " class="w-full px-3 py-2 border rounded-md 
                     focus:outline-none focus:border-Bpurple drop-shadow" required>
                 </div> 
                 <div class="my-4">
                     <label for="email" class="block font-semibold">
                     </label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email ID" class="w-full px-3 py-2 border rounded-md 
+                    <input type="email" id="email" name="email" placeholder="Email ID" class="w-full px-3 py-2 border rounded-md 
                     focus:outline-none focus:border-Bpurple drop-shadow" required>
                 </div>  
+                 
                 <div class="my-4">
-                    <label for="phoneno" class="block font-semibold">
+                    <label for="address" class="block font-semibold">
                     </label>
-                    <input type="tel" id="phoneno" name="phoneno" placeholder="Enter your phone number " class="w-full px-3 py-2 border rounded-md 
-                    focus:outline-none focus:border-Bpurple drop-shadow" required>
-                </div>  
-                <div class="my-4">
-                    <label for="comment" class="block font-semibold">
-                    </label>
-                    <textarea type="comment" id="comment" name="comment" placeholder="Enter your comments or describe your problem " rows="5" class="w-full px-3 py-2 border rounded-md 
+                    <input type="address" id="address" name="address" placeholder="Address " class="w-full px-3 py-2 border rounded-md 
                     focus:outline-none focus:border-Bpurple drop-shadow" required></textarea>
-                </div>   
-                <div>
-                    <button  class="bg-Bpurple text-Twhite text-[1.3rem] m-2 relative 
+                </div>  
+                <div class="my-4">
+                    <label for="Liscence" class="block font-semibold">
+                    </label>
+                    <input type="number" id="Liscence" name="Liscence" placeholder="Liscence no. " class="w-full px-3 py-2 border rounded-md 
+                    focus:outline-none focus:border-Bpurple drop-shadow" required>
+                </div>
+                
+                <div class="flex justify-between">
+                    <div class="mb-4">
+                        <label for="time" class="block font-semibold ">
+                            Time
+                        </label>
+                        <input type="number" id="timeTo" name="timeTo" placeholder="To" class="w-[98%] mx-1 px-3 py-2 border rounded-md 
+                        focus:outline-none focus:border-Bpurple drop-shadow" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="time" class="block font-semibold text-Twhite">
+                            .
+                        </label>
+                        <input type="number" id="timeFrom" name="timeFrom" placeholder="From" class="w-[98%] mx-1 px-3 py-2 border rounded-md 
+                        focus:outline-none focus:border-Bpurple drop-shadow" required>
+                    </div>
+                </div>
+                <hr style="height: 1px; background-color: #22223b; border: none;">
+
+                <div class="flex justify-between">
+                    <div class="mb-4">
+                        <label for="price" class="block font-semibold ">
+                            Price Details
+                        </label>
+                        <p>Total hrs </p>
+                        <p>Total amount</p>
+                    </div>
+                    <div class="mb-4">
+                        <label for="price" class="block font-semibold text-Twhite">
+                            .
+                        </label>
+                       <p>x hrs</p>
+                       <p>x Rs</p>
+                    </div> 
+                </div>
+
+
+                <div class="flex flex-col gap-2 w-[90%] justify-center m-auto">
+                    <button  class="bg-Bpurple text-Twhite text-[1.3rem] m-6 relative 
                 self-center h-[30px] w-[200px] rounded-2xl cursor-pointer hover:opacity-80 transition-all duration-200">
                     Submit
                 </button>

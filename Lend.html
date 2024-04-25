@@ -45,7 +45,6 @@
             <li><a href="help.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Support</a></li>
             <li><a href="#" id="closeSidebar" class="block px-4 py-2 text-sm hover:bg-gray-800">Close</a></li>
             <li><a href="login.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Profile</a></li>
-
         </ul>
     </div>
     <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
@@ -79,7 +78,7 @@
     </div>
 
 
-    <?php
+    <!-- <?php
     // Include the PHP script to handle database operations
     include 'api.php';
 
@@ -90,7 +89,7 @@
         // Note: Add your logic here to handle form submission as required
         echo "Form submitted successfully!";
     }
-    ?>
+    ?> -->
     <form action="api.php" method="post" class="flex flex-col gap-2 w-[90%] justify-center m-auto text-black">
         <input type="name" name="name" class="text-md p-1 rounded-md capitalize drop-shadow-md border-1 shadow-slate-300" placeholder="Your Name">
         <input type="number" name="license" class="text-md p-1 rounded-md capitalize drop-shadow-md border-1 shadow-slate-300" placeholder="Owner's License No.">
@@ -122,16 +121,16 @@
     </div>
         
     <div class="flex w-[100%] justify-center items-center">
-        <a href="page9.html">
+        <a href="thankyou.html">
         <button class="bg-Bpurple p-1 text-Twhite text-xl rounded-3xl capitalize w-[220px] mt-4">Done</button>
         </a>
     </div>
     
-    <footer class="bg-Bpurple py-[70px] mt-[50px]">
+    <footer class="bg-Bpurple py-[30px] mt-[50px]">
         <div class="max-w-[1170px] m-auto ">
             <div class="flex flex-wrap justify-center sm:flex-row ml-[1rem] ">
                 <div class="w-[50%] py-[15px] sm:w-[25%]">
-                    <h4 class=" text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-Bpink max-w-[50px]">company</h4>
+                    <h4 class=" text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-green-400 max-w-[50px]">company</h4>
                     <ul class="space-y-2 ">
                         <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">about us</a></li>
                         <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">our services</a></li>
@@ -140,17 +139,16 @@
                 </div>
 
                 <div class="w-[50%] py-[15px] sm:w-[25%]">
-                    <h4 class=" text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-Bpink max-w-[50px]	"> <pre class="font-poppins font-medium">Get Help</pre></h4>
+                    <h4 class=" text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-green-400 max-w-[50px]	"> <pre class="font-poppins font-medium">Get Help</pre></h4>
                     <ul class="list-none space-y-2">
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">FAQ</a></li>
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">returns</a></li>
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">CAR status</a></li>
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">payment options</a></li>
+                        <li class="mb-2"><a href="#" class="text-base no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">Help</a></li>
+                        <li class="mb-2"><a href="#" class="text-base no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">Contact Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-base no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">Payment Options</a></li>
                     </ul>
                 </div>
                 
-                <div class="w-[50%] py-[15px] sm:w-[25%]">
-                    <h4 class="text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-Bpink max-w-[50px] "><pre class="font-poppins font-medium">Follow Us</pre></h4>
+                <div class=" py-[15px] sm:w-[25%]">
+                    <h4 class="text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-green-400 max-w-[50px] "><pre class="font-poppins font-medium">Follow Us</pre></h4>
                     <div class="flex gap-2 flex-wrap">
                         <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-twitter"></i></a>
@@ -161,6 +159,7 @@
             </div>
         </div>
     </footer>
+
 <script>
     //1.
     feather.replace()

@@ -50,27 +50,27 @@
     <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
 
     <div class="flex w-[100%] flex-col justify-center lg:flex-row px-4">
-        <div class=" flex my-12 mx-auto flex-col ">
+        <div class=" flex my-1 mx-auto flex-col ">
                 <p class="font-bold text-lg">Company</p>
                 <div class="flex justify-between">
                     <p class="text-Bpurple m-1">Bike name</p>  
                     <div class="flex items-center text-sm relative" >
-                        <i class="fa-solid fa-star" ></i>
-                        <i class="fa-solid fa-star" ></i>
-                        <i class="fa-solid fa-star" style="color: #22223b;"></i>
-                        <i class="fa-solid fa-star" style="color: #22223b;"></i>
-                        <i class="fa-regular fa-star" style="color: #22223b;"></i>
-                        <p class="rating">4.3</p>
+                        <i class="fa-solid fa-star m-[1px]" ></i>
+                        <i class="fa-solid fa-star m-[1px]" ></i>
+                        <i class="fa-solid fa-star m-[1px]" style="color: #22223b;"></i>
+                        <i class="fa-solid fa-star m-[1px]" style="color: #22223b;"></i>
+                        <i class="fa-regular fa-star m-[1px]" style="color: #22223b;"></i>
+                        <p class="rating m-1">4.3</p>
                     </div>
                 </div>
-                <div class="max-w-[400px] h-[400px] bg-contain flex items-center justify-center shadow-lg m-4" >
-                    <img src="./Images/bg.jpg" alt=""  class="object-cover w-full h-full">
+                <div class="max-w-[400px] h-[400px] bg-contain flex items-center justify-center shadow-lg m-1" >
+                    <img src="./Images/scooty1.webp" alt=""  class="object-cover w-full h-full">
                 </div>
         </div>
         
 
         <!-- Changing-part for other pages -->
-        <div class=" my-12 mx-auto flex flex-col min-w-[45%]">
+        <div class="flex flex-col min-w-[50%]">
             <div class="flex flex-col gap-2 w-[90%] justify-center m-auto text-black">
             <hr class="block" style="height: 1px; background-color: #22223b; border: none;">
 
@@ -90,7 +90,9 @@
                 <i class="fa-solid fa-location-dot" style="color: #22223b; margin: 4px;"></i>
                 <p>K.K.Wagh Institute of Engineering Education and Research, Panchavati, Nashik, 422207</p>
             </div>
-            <button id="bookNowBtn" class="bg-Bpurple text-Twhite text-[1.3rem] m-6 relative self-center h-[30px] w-[200px] rounded-2xl cursor-pointer hover:opacity-80 transition-all duration-200">Rent Now</button>
+            <button id="bookNowBtn" class="bg-Bpurple text-Twhite text-[1.3rem] m-2 relative self-center h-[30px] w-[200px] rounded-2xl cursor-pointer hover:opacity-80 transition-all duration-200">
+                Rent Now
+            </button>
             
             <div id="popup" class="hidden fixed top-0 left-0 w-[100%] h-[100%] bg-[#00000080] z-10">
                 <div class="bg-white p-5 w-[80%] max-w-[600px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg">
@@ -101,13 +103,15 @@
                     <label for="agreeCheckbox" class="text-Bpurple">
                         <input type="checkbox" id="agreeCheckbox">  Agree
                     </label>
-                    <button id="continueBtn" class="text-Bpurple px-[10px] py-[5px] text-[1rem] absolute bottom-5 right-5 bg-Twhite rounded" disabled>Continue</button>
+                    <button id="continueBtn" class="text-Bpurple px-[10px] py-[5px] text-[1rem] absolute bottom-5 right-5 bg-Twhite rounded" disabled>
+                        Continue
+                    </button>
                 </div>
             </div>
 
             <hr style="height: 1px; background-color: #22223b; border: none;">
             
-            <p style="font-size: 1.2rem; margin-top: 1rem;">Vehicle Details</p>
+            <p style="font-size: 1.2rem; margin-top: 0.5rem;">Vehicle Details</p>
             
             <div style="display: flex; padding:0.5rem;">
                 <div style="position: relative; width: 50%; display: flex; flex-direction: column; justify-content: space-evenly;" >
@@ -129,11 +133,11 @@
         </div>        
     </div>     
         
-    <footer class="bg-Bpurple py-[70px] mt-[50px]">
+    <footer class="bg-Bpurple py-[30px] mt-[50px]">
         <div class="max-w-[1170px] m-auto ">
             <div class="flex flex-wrap justify-center sm:flex-row ml-[1rem] ">
                 <div class="w-[50%] py-[15px] sm:w-[25%]">
-                    <h4 class=" text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-Bpink max-w-[50px]">company</h4>
+                    <h4 class=" text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-green-400 max-w-[50px]">company</h4>
                     <ul class="space-y-2 ">
                         <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">about us</a></li>
                         <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">our services</a></li>
@@ -142,17 +146,16 @@
                 </div>
 
                 <div class="w-[50%] py-[15px] sm:w-[25%]">
-                    <h4 class=" text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-Bpink max-w-[50px]	"> <pre class="font-poppins font-medium">Get Help</pre></h4>
+                    <h4 class=" text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-green-400 max-w-[50px]	"> <pre class="font-poppins font-medium">Get Help</pre></h4>
                     <ul class="list-none space-y-2">
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">FAQ</a></li>
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">returns</a></li>
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">CAR status</a></li>
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">payment options</a></li>
+                        <li class="mb-2"><a href="#" class="text-base no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">Help</a></li>
+                        <li class="mb-2"><a href="#" class="text-base no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">Contact Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-base no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">Payment Options</a></li>
                     </ul>
                 </div>
                 
-                <div class="w-[50%] py-[15px] sm:w-[25%]">
-                    <h4 class="text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-Bpink max-w-[50px] "><pre class="font-poppins font-medium">Follow Us</pre></h4>
+                <div class=" py-[15px] sm:w-[25%]">
+                    <h4 class="text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-green-400 max-w-[50px] "><pre class="font-poppins font-medium">Follow Us</pre></h4>
                     <div class="flex gap-2 flex-wrap">
                         <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-twitter"></i></a>
@@ -163,6 +166,7 @@
             </div>
         </div>
     </footer>
+
     <script >
     //1.
     feather.replace()
