@@ -118,14 +118,31 @@
                         <p class="m-1 font-bold">Edit</p>
                     </button>
                 </a>
-                <a href="upload.html" class="relative self-center m-4">
-                    <button id="bookNowBtn" class="bg-red-600 text-Twhite text-[1.3rem]  
-                    h-[30px] w-[140px] rounded-md cursor-pointer hover:opacity-80 transition-all duration-200
-                    flex justify-center items-center">
-                        <i class="fa-regular fa-trash-can m-1"></i>
-                        <p class="m-1 font-bold">Delete</p>
-                    </button>
-                </a>
+                <button id="Delete" class="bg-red-600 text-Twhite text-[1.3rem] relative self-center m-4 
+                h-[30px] w-[140px] rounded-md cursor-pointer hover:opacity-80 transition-all duration-200
+                flex justify-center items-center">
+                    <i class="fa-regular fa-trash-can m-1"></i>
+                    <p class="m-1 font-bold">Delete</p>                    
+                </button>
+                <div id="popup" class="hidden fixed top-0 left-0 w-[100%] h-[100%] bg-[#00000080] z-10">
+                    <div class="bg-white p-5 w-[80%] max-w-[400px] absolute top-1/2 left-1/2 transform 
+                        flex flex-col justify-center items-center -translate-x-1/2 -translate-y-1/2 rounded-lg">
+                        <div>
+                            <span class="absolute top-[10px] right-[10px] cursor-pointer" style="color: #22223b;" onclick="closePopup()">&times;</span>
+                            <p class="font-bold text-[1.2rem]">Delete</p>
+                            <!-- Your terms and conditions content here -->
+                            <p class="m-1">Delete item ?</p>
+                        </div>
+                        <div class="flex gap-1">
+                            <button id="delete" class="text-Bpurple px-[10px] py-[5px] text-[1rem]  bg-Twhite rounded" disabled>
+                                Cancel
+                            </button>
+                            <button id="delete" class="text-Twhite px-[10px] py-[5px] text-[1rem]  bg-red-600 rounded" disabled>
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <hr style="height: 1px; background-color: #22223b; border: none;">
@@ -207,6 +224,28 @@
 
     // Event listener for closing sidebar when "Close" link is clicked
     document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
+
+    // 3.
+    const DeleteBtn = document.getElementById('Delete');
+    const popup = document.getElementById('popup');
+    const cancelBtn = document.getElementById('cancel');
+    const deleteLink = document.getElementById('deleteLink');
+
+    // Function to open the popup when the button is clicked
+    DeleteBtn.addEventListener('click', () => {
+        popup.classList.remove('hidden');
+    });
+
+    // Function to close the popup when the close button is clicked
+    function closePopup() {
+        popup.classList.add('hidden');
+    }
+
+    // Function to handle delete button click event
+    function deleteItem() {
+        // Perform delete action here (e.g., redirect to delete page)
+        window.location.href = 'delete_page.html'; // Replace 'delete_page.html' with the URL of the delete page
+    }
 
     </script>
 </body>
