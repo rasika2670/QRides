@@ -7,6 +7,7 @@ module.exports = {
         poppins:['Poppins', "sans-serif"],
         playfair:['Playfair Display'],
         rubik: ['Rubik', 'sans-serif'],
+        marcellus : ['Marcellus' , 'serif'] ,
       },
       colors:{
         Bpurple:"#22223b",
@@ -17,6 +18,8 @@ module.exports = {
         Bpink:"#9a8c98",
         Blacky:"#24262b",
         Lpurple:" #757A9D",
+        Violet : "#6854A0",
+        Lviolet : "#D4C3F5" ,
       }
     },
   },
