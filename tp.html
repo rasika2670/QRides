@@ -1,71 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Page</title>
-    <style>
-        /* Add your CSS styles here */
-    .infoBox {
-        background-color: #f0f0f0;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
+<main>
+    <p class="m-4 text-xl font-semibold">Rent</p>
+    <div class="search">
+        <select class="search-select">
+            <option>All Services</option>
+        </select>
+    </div>
 
-    </style>
-
-</head>
-<body>
-    <h1>Upload Information</h1>
-    <div id="uploadedInfo"></div>
-
-    <button id="showFormBtn">Upload</button>
-
-    <form id="uploadForm" style="display: none;">
-        <label for="nameInput">Name:</label>
-        <input type="text" id="nameInput" placeholder="Enter your name">
-        <label for="messageInput">Message:</label>
-        <input type="text" id="messageInput" placeholder="Enter your message">
-        <button type="submit">Submit</button>
-    </form>
-    
-    <script>
-    // Get elements
-        const showFormBtn = document.getElementById('showFormBtn');
-        const uploadForm = document.getElementById('uploadForm');
-        const uploadedInfoDiv = document.getElementById('uploadedInfo');
-
-        // Add event listener to show form
-        showFormBtn.addEventListener('click', function() {
-            showFormBtn.style.display = 'none'; // Hide the button
-            uploadForm.style.display = 'block'; // Show the form
-        });
-
-        // Add event listener for form submission
-        uploadForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission behavior
-
-            // Get the values entered in the input fields
-            const name = document.getElementById('nameInput').value;
-            const message = document.getElementById('messageInput').value;
-
-            // Create a new div element to display the uploaded information
-            const infoDiv = document.createElement('div');
-            infoDiv.classList.add('infoBox');
-            infoDiv.innerHTML = `<strong>Name:</strong> ${name}<br><strong>Message:</strong> ${message}`;
-
-            // Append the infoDiv to the uploadedInfoDiv
-            uploadedInfoDiv.appendChild(infoDiv);
-
-            // Clear the input fields after submission
-            document.getElementById('nameInput').value = '';
-            document.getElementById('messageInput').value = '';
-
-            // Hide the form and show the button again
-            uploadForm.style.display = 'none';
-            showFormBtn.style.display = 'block';
-        });
-
-    </script>
-</body>
-</html>
+    <div class="main">
+        {% for item in rent_data %}
+        <div class="info cursor-pointer" onclick="window.open('{{ url_for('product') }}','mywindow');">
+            <div class="img" style="background-image: url('{{ item.image_url }}');"></div>
+            <div class="content">
+                <p class="company-name">{{ item.company_name }}</p>
+                <p class="bike-name">{{ item.bike_name }}</p>
+                <div class="flex justify-between">
+                    <p class="price" style="font-size: 0.8rem;">{{ item.price }}</p>
+                    <div class="pr">
+                        <i class="fa-solid fa-star" style="color: #22223b;"></i>
+                        <p class="rating">{{ item.rating }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>
