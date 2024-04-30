@@ -6,7 +6,6 @@
     <title>Product</title>
     <link rel="stylesheet" href="./tailwind/output.css" />
     <link rel="stylesheet" href="main.css" />
-    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
@@ -118,14 +117,35 @@
                         <p class="m-1 font-bold">Edit</p>
                     </button>
                 </a>
-                <a href="upload.html" class="relative self-center m-4">
-                    <button id="bookNowBtn" class="bg-red-600 text-Twhite text-[1.3rem]  
-                    h-[30px] w-[140px] rounded-md cursor-pointer hover:opacity-80 transition-all duration-200
-                    flex justify-center items-center">
-                        <i class="fa-regular fa-trash-can m-1"></i>
-                        <p class="m-1 font-bold">Delete</p>
-                    </button>
-                </a>
+                <button id="Delete" class="bg-red-600 text-Twhite text-[1.3rem] relative self-center m-4 
+                h-[30px] w-[140px] rounded-md cursor-pointer hover:opacity-80 transition-all duration-200
+                flex justify-center items-center">
+                    <i class="fa-regular fa-trash-can m-1"></i>
+                    <p class="m-1 font-bold">Delete</p>                    
+                </button>
+                <div id="popup" class="hidden fixed top-0 left-0 w-[100%] h-[100%] bg-[#00000080] z-10">
+                    <div class="bg-white p-5 w-[80%] max-w-[400px] absolute top-1/2 left-1/2 transform 
+                        flex flex-col justify-center items-center -translate-x-1/2 -translate-y-1/2 rounded-lg">
+                        <div class="flex flex-col justify-center items-center">
+                            <span class="absolute top-[10px] right-[10px] cursor-pointer" style="color: #22223b;" onclick="closePopup()">&times;</span>
+                            <p class="font-bold text-[1.2rem]">Delete</p>
+                            <!-- Your terms and conditions content here -->
+                            <p class="m-1">Delete item ?</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="./edit.html" class="felx justify-center items-center">
+                                <button id="cancel" class="text-Bpurple px-[10px] py-[5px] text-[1rem]  bg-Twhite rounded" >
+                                    Cancel
+                                </button>
+                            </a>
+                            <a href="./owner.html">
+                                <button id="deleteLink" class="text-Twhite px-[10px] py-[5px] text-[1rem]  bg-red-600 rounded" >
+                                    Delete
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <hr style="height: 1px; background-color: #22223b; border: none;">
@@ -190,15 +210,6 @@
     //1.
     feather.replace()
 
-    //2.
-    // Function to toggle sidebar
-    const toggleSidebar = () => {
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('sidebar-overlay');
-        sidebar.classList.toggle('translate-x-full');
-        overlay.classList.toggle('hidden');
-    };
-
     // Event listener for toggling sidebar
     document.getElementById('toggleSidebar').addEventListener('click', toggleSidebar);
 
@@ -208,6 +219,23 @@
     // Event listener for closing sidebar when "Close" link is clicked
     document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
 
+    // 3.
+    const DeleteBtn = document.getElementById('Delete');
+    const popup = document.getElementById('popup');
+    const cancelBtn = document.getElementById('cancel');
+    const deleteLink = document.getElementById('deleteLink');
+
+    // Function to open the popup when the button is clicked
+    DeleteBtn.addEventListener('click', () => {
+        popup.classList.remove('hidden');
+    });
+
+    // Function to close the popup when the close button is clicked
+    function closePopup() {
+        popup.classList.add('hidden');
+    }
+
+    
     </script>
 </body>
 </html>
