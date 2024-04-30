@@ -787,6 +787,10 @@ video {
   clear: none;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .m-1 {
   margin: 0.25rem;
 }
@@ -813,6 +817,10 @@ video {
 
 .m-\[-1px\] {
   margin: -1px;
+}
+
+.m-\[1px\] {
+  margin: 1px;
 }
 
 .m-\[35px\] {
@@ -858,6 +866,11 @@ video {
   margin-bottom: 0px;
 }
 
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .my-12 {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -866,6 +879,11 @@ video {
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .my-4 {
@@ -935,10 +953,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-\[0px\] {
-  margin-top: 0px;
 }
 
 .mt-\[50px\] {
@@ -1245,6 +1259,10 @@ video {
 
 .min-w-\[45\%\] {
   min-width: 45%;
+}
+
+.min-w-\[50\%\] {
+  min-width: 50%;
 }
 
 .max-w-\[100px\] {
@@ -2352,6 +2370,11 @@ video {
   border-color: rgb(17 24 39 / var(--tw-border-opacity));
 }
 
+.border-green-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(74 222 128 / var(--tw-border-opacity));
+}
+
 .bg-Bpink {
   --tw-bg-opacity: 1;
   background-color: rgb(154 140 152 / var(--tw-bg-opacity));
@@ -2398,6 +2421,11 @@ video {
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 .bg-slate-600 {
@@ -2572,6 +2600,11 @@ video {
   padding-right: 10px;
 }
 
+.px-\[20px\] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .px-\[50px\] {
   padding-left: 50px;
   padding-right: 50px;
@@ -2595,6 +2628,11 @@ video {
 .py-\[15px\] {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.py-\[30px\] {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .py-\[5px\] {
@@ -3281,13 +3319,6 @@ video {
   forced-color-adjust: none;
 }
 
-.\[-\:\FFFDNYn\2DCC\FFFD\] {
-  -: �NYnⷌ�;
-}
-
-.\[hj\:\FFFD\FFFD D\2c NQ\D3\FFFD\FFFD\FFFD\FIC\FFFD\|v_d\FFFD\697\FFFDmB\/\FFFDl\FFFD\"\FFFD\"\FFFD\FFFD\FFFD f\FFFD\FFFDi\FFFD\14\FFFD_w5\FFFD\FFFD\FFFD\FFFD\FFFD\>\FFFD\54F\FFFD\FFFD\FFFD\FFFD\135\1Cx\FFFDIJ6V\FFFDV\^\14\FFFD 4y\FFFDq\FFFD\] {
-  hj: ��D,NQÓ���IC�|v d�ڗ�mB/�l�"�"���f��i�� w5�����>�Տ����ĵx�IJ6V�V^�4y�q�;
-}
 
 @media (min-width: 640px) {
   .sm\:container {
@@ -3446,6 +3477,12 @@ video {
   display: block;
 }
 
+@media not all and (min-width: 640px) {
+  .max-sm\:mt-4 {
+    margin-top: 1rem;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:my-12 {
     margin-top: 3rem;
@@ -3506,6 +3543,16 @@ video {
 
   .sm\:underline {
     text-decoration-line: underline;
+  }
+}
+
+@media (min-width: 1000px) {
+  .min-\[1000px\]\:sticky {
+    position: sticky;
+  }
+
+  .min-\[1000px\]\:top-0 {
+    top: 0px;
   }
 }
 

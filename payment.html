@@ -67,6 +67,64 @@
             </div>
         </div> 
 
+        <div class="min-h-screen py-5">
+            <div class="max-w-lg mx-auto mb-4">
+                <div class="text-center">
+                    <h1 class="text-3xl font-bold">Tailwind Payment Forms</h1>
+                </div>
+            </div> <!-- End -->
+            <div class="max-w-lg mx-auto">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                        <!-- Credit card form tabs -->
+                        <ul role="tablist" class="flex bg-gray-100 rounded mb-3">
+                            <li class="flex-1"> <a href="#credit-card" class="py-3 px-6 block text-center bg-white rounded-t-lg border-b-2 border-blue-500 text-blue-500 font-semibold hover:bg-blue-500 hover:text-white focus:outline-none"> <i class="fas fa-credit-card mr-2"></i> Credit Card </a> </li>
+                            <li class="flex-1"> <a href="#paypal" class="py-3 px-6 block text-center bg-white rounded-t-lg text-gray-600 font-semibold hover:bg-gray-200 focus:outline-none"> <i class="fab fa-paypal mr-2"></i> Paypal </a> </li>
+                            <li class="flex-1"> <a href="#net-banking" class="py-3 px-6 block text-center bg-white rounded-t-lg text-gray-600 font-semibold hover:bg-gray-200 focus:outline-none"> <i class="fas fa-mobile-alt mr-2"></i> Net Banking </a> </li>
+                        </ul>
+                    </div> <!-- End -->
+                    <!-- Credit card form content -->
+                    <div class="p-6">
+                        <!-- credit card info-->
+                        <div id="credit-card" class="pt-3">
+                            <form class="space-y-4" method="POST" action="../../../../../">
+                                <div> <label class="font-semibold">Card Owner</label> <input type="text" name="username" placeholder="Card Owner Name" required class="form-input block w-full"> </div>
+                                <div> <label class="font-semibold">Card number</label>
+                                    <div class="flex items-center border rounded mt-1"> <input type="text" name="cardNumber" placeholder="Valid card number" class="form-input block w-full" required> <span class="text-xs text-gray-600 mx-2"><i class="fab fa-cc-visa"></i></span> <span class="text-xs text-gray-600 mx-2"><i class="fab fa-cc-mastercard"></i></span> <span class="text-xs text-gray-600 mx-2"><i class="fab fa-cc-amex"></i></span> </div>
+                                </div>
+                                <div class="flex space-x-4">
+                                    <div class="w-1/2"> <label class="font-semibold">Expiration Month</label>
+                                        <div class="flex mt-1"> <input type="number" name="expirationMonth" placeholder="MM" class="form-input block w-full" required> </div>
+                                    </div>
+                                    <div class="w-1/2"> <label class="font-semibold">Expiration Year</label> <input type="number" name="expirationYear" placeholder="YY" class="form-input block w-full" required> </div>
+                                </div>
+                                <div> <label class="font-semibold">CVV</label> <input type="text" name="cvv" placeholder="CVV" class="form-input block w-full" required> </div>
+                                <div class="mt-6"> <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">Confirm Payment</button> </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Paypal info -->
+                    <div id="paypal" class="hidden pt-3">
+                        <!-- Include PayPal form content if needed -->
+                        <!-- PayPal form content -->
+                        <div class="text-center">
+                            <h3 class="text-xl font-semibold">PayPal Form</h3>
+                            <p class="text-gray-600">Include your PayPal form content here.</p>
+                        </div>
+                    </div> <!-- End -->
+                    <!-- bank transfer info -->
+                    <div id="net-banking" class="hidden pt-3">
+                        <!-- Include Net Banking form content if needed -->
+                        <!-- Net Banking form content -->
+                        <div class="text-center">
+                            <h3 class="text-xl font-semibold">Net Banking Form</h3>
+                            <p class="text-gray-600">Include your Net Banking form content here.</p>
+                        </div>
+                    </div> <!-- End -->
+                    <!-- End -->
+                </div>
+            </div>
+        </div>
         <footer class="bg-Bpurple py-[30px] mt-[50px]">
         <div class="max-w-[1170px] m-auto ">
             <div class="flex flex-wrap justify-center sm:flex-row ml-[1rem] ">
@@ -165,6 +223,29 @@
                 errorMessage.classList.add('hidden');
                 this.setCustomValidity('');
         }
+        });
+
+
+        //5.
+        const tabs = document.querySelectorAll('[role="tab"]');
+        const tabList = document.querySelector('[role="tablist"]');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (event) => {
+                event.preventDefault();
+                const activeTabs = document.querySelectorAll('[aria-selected="true"]');
+                
+                // Hide all tab panels
+                activeTabs.forEach(activeTab => {
+                    activeTab.setAttribute('aria-selected', 'false');
+                    document.getElementById(activeTab.getAttribute('href').slice(1)).classList.add('hidden');
+                });
+                
+                // Show the clicked tab panel
+                event.currentTarget.setAttribute('aria-selected', 'true');
+                const targetPanel = document.getElementById(event.currentTarget.getAttribute('href').slice(1));
+                targetPanel.classList.remove('hidden');
+            });
         });
 </script>
 </body>
