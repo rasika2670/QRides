@@ -23,20 +23,31 @@
                 <a href="home.html" class="flex flex-col items-center text-xs"><i data-feather="home" class="size-5"></i><span>Home</span></a>
                 <a href="navig.html" class="flex flex-col items-center text-xs"><i data-feather="map" class="size-5"></i><span>Navigation</span></a>
                 <a href="help.html" class="flex flex-col items-center text-xs"><i data-feather="cloud" class="size-5"></i><span>Support</span></a>
-                <div id="myBtn" class="flex flex-col items-center text-xs"><i data-feather="bell" class="size-5"></i><span>Notification</span></div>
+                <button id="notificationBtn" class="notification-btn flex flex-col items-center text-xs"><i data-feather="bell" class="size-5"></i><span>Notification</span></button>
             </div> 
         </div>
         <div class="flex items-center">
-            <a href="login.html"><i data-feather="user" class="size-10 relative left-3 mx-6 my-2 hidden sm:block"></i></a>
+            <a href="login.html"><div class="h-8 w-8 items-end justify-center rounded-[50%] overflow-hidden hidden sm:flex " style="border: 2px solid;">
+            <i class="fa-solid fa-user text-2xl m-[-1px]"></i>
+        </div></a>
             <div id="hamburger" class="sm:hidden ml-4">
                 <i id="toggleSidebar" data-feather="menu" class="size-6 font-extrabold cursor-pointer font-white text-white"></i>
             </div>
         </div>
     </nav>
     
+    <div id="notificationCard" class="notification-card  bg-[#00000080] z-10 hidden bg-Tpurple bg-opacity-75 fixed top-0 left-0 w-full h-full flex justify-center items-center">
+        <div class="notification-content bg-white p-6 rounded-lg shadow-lg text-center">
+            <h2 class="text-2xl font-bold mb-4">Notification</h2>
+            <p class="text-lg mb-4">Your notification message goes here...</p>
+            <button id="closeNotificationBtn" class="btn bg-Tpurple text-white px-4 py-2 rounded-md hover:bg-opacity-90">Close</button>
+        </div>
+    </div>
+    
     <!-- sidebar -->
-    <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
-        <ul class="py-8">
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-10 hidden"></div>
+    <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-10 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <ul class="py-8 ">
             <li><a href="home.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Home</a></li>
             <li><a href="navig.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Navigation</a></li>
             <li><a href="help.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Support</a></li>
@@ -45,7 +56,6 @@
 
         </ul>
     </div>
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
 
 
     <main class="flex flex-col justify-center items-center m-6 md:flex-row">
@@ -115,6 +125,30 @@
         // Event listener for closing sidebar when "Close" link is clicked
         document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
     
+        document.addEventListener('DOMContentLoaded', function() {
+            const notificationBtn = document.getElementById('notificationBtn');
+            const notificationCard = document.getElementById('notificationCard');
+            const closeNotificationBtn = document.getElementById('closeNotificationBtn');
+        
+            // Show notification card when the button is clicked
+            notificationBtn.addEventListener('click', function() {
+                notificationCard.classList.remove('hidden');
+            });
+        
+            // Hide notification card when close button is clicked
+            closeNotificationBtn.addEventListener('click', function() {
+                notificationCard.classList.add('hidden');
+            });
+        
+            // Hide notification card when clicking outside of it
+            window.addEventListener('click', function(event) {
+                if (event.target === notificationCard) {
+                    notificationCard.classList.add('hidden');
+                }
+            });
+        });
+        
+        
     </script>
     </body>
     </html>
