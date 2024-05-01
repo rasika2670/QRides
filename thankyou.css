@@ -42,4 +42,14 @@ button {
     cursor: pointer;
     font-size: x-large;
   }
-  
+  @keyframes stretch {
+    0% {
+      width: 100px;
+      height: 0;
+      transform-origin: bottom; /* Set transform origin to bottom */
+    }
+    100% {
+      width: 100px;
+      height: 400px; /* Adjust to the desired height */
+    }
+  }
