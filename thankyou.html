@@ -10,17 +10,21 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <style>
-        .content{
-            animation: moveUpDown 1s infinite alternate ease-in-out;
-        } 
-        @keyframes moveUpDown {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-60%);
-            }
+        .content {
+        animation: moveUpDown 2s infinite alternate ease-in-out;
+    }
+
+    @keyframes moveUpDown {
+        0% {
+            transform: translateY(0);
         }
+        50% {
+            transform: translateY(30px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
     </style>
 </head>
 
@@ -59,15 +63,17 @@
     </div>
    <!-- <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden">-->
 
-<a class="flex justify-center items-center flex-col " href="./index.html">
-    <div class="w-[100vw] h-16 bg-white flex justify-center items-center text-[1.5rem] shadow">
+<a class="flex justify-between items-center flex-col " href="./index.html">
+    <img src="Images/thanks-1.png" alt="Thank you"  class="rounded-lg -[300px] h-[300px] m-8">
+    <div class="flex justify-center items-center flex-col">
+    <div class="container w-[100vw] h-28 relative m-0 flex flex-col items-center overflow-hidden">
+        <img src="./Images/triangle.png" class="w-16 mb-[-0.7rem] content m-4">
+        <div class="w-[100%] h-16 bg-white mb-[-3rem] content rounded-tl-xl rounded-tr-xl overflow-hidden"></div>
+    </div>
+    <div class="w-[100vw] h-10 mt-[-1rem] bg-white flex justify-center text-center items-end  p-12 text-[1.5rem]">
         Done
     </div>
-    <div class="container w-[100vw] h-16 relative m-0 overflow-hidden flex flex-col items-center">
-        <div class="w-full h-8 bg-white m-0 p-0 content rounded-bl-xl rounded-br-xl shadow overflow-hidden"></div>
-        <img src="./Images/triangle.png" class="w-16 mt-[-0.7rem]  content">
-    </div>
-    <img src="Images/thanks-1.png" alt="Thank you"  class="rounded-lg -[300px] h-[300px] m-8">
+</div>
         
 
     <!-- <div class="box-container" onclick="animateAndRedirect()">
