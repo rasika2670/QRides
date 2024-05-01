@@ -4,140 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QRide</title>
+    <link rel="icon" href="./Images/2.png" type="image/icon type"/>
     <link rel="stylesheet" href="./tailwind/output.css" />
     <link rel="stylesheet" href="main.css" />    
-    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
-
 <body class="flex flex-col gap-0 bg-Twhite text-Bpurple w-[100vw] font-rubik">  
-    <nav class="bg-Bpurple w-[100%] text-Twhite flex items-center justify-between font-rubik px-[50px] sm:h-[80px] lg:h-[60px]">
-        <div class="block sm:hidden">
-            <a href="javascript:history.back()"><i data-feather="arrow-left"></i></a>
+    <header class="flex h-14 bg-Bpurple text-Twhite items-center justify-between px-8">
+        <div class="flex items-center sm:justify-end ">
+            <a href="index.html">
+                <img src="Images/logo.jpg" class="h-14 mr-4">
+            </a>
+            <ul class="items-center justify-evenly hidden sm:flex">
+                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all duration-200 relative group w-full h-full">
+                    <a href="#" class="m-4">Home</a>
+                    <div class="absolute bottom-0 w-full h-1 bg-Lpurple
+                    hidden group-hover:block"></div>
+                </li>
+                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
+                duration-200 relative group w-full h-full">
+                    <a href="navig.html" class="m-4">Navigation</a>
+                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
+                    hidden group-hover:block"></div>
+                </li>
+                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
+                duration-200 relative group w-full h-full">
+                    <a href="booking.html" class="m-4">History</a>
+                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
+                    hidden group-hover:block"></div>
+                </li>
+                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
+                duration-200 relative group w-full h-full">
+                    <a href="#" class="text-center m-4">Notifications</a>
+                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
+                    hidden group-hover:block"></div>
+                </li>
+                <li class="flex flex-col items-center hover:text-Lpurple cursor-pointer transition-all 
+                duration-200 relative group w-full h-full">
+                    <a href="#" class="text-center m-4">Help</a>
+                    <div class="absolute bottom-0 w-full h-1 mt-4 bg-Lpurple
+                    hidden group-hover:block"></div>
+                </li>
+            </ul>
         </div>
-        <div class="h-[auto] ">
-            <a href="index.html"><img src="/Images/logo.jpg" style="height: 60px;" alt="logo"></a>
+        <div class="h-8 w-8 items-end justify-center rounded-[50%] overflow-hidden hidden sm:flex " style="border: 2px solid;">
+            <i class="fa-solid fa-user text-2xl m-[-1px]"></i>
         </div>
-        <div class="hidden sm:flex flex-row flex-wrap flex-grow max-w-[700px] justify-between mx-12 lg:flex">
-            <a href="index.html" class="flex flex-col items-center text-xs"><i data-feather="home" class="size-5"></i><span>Home</span></a>
-            <a href="navig.html" class="flex flex-col items-center text-xs"><i data-feather="map" class="size-5"></i><span>Booking</span></a>
-            <a href="help.html" class="flex flex-col items-center text-xs"><i data-feather="cloud" class="size-5"></i><span>Support</span></a>
-            <div id="myBtn" class="flex flex-col items-center text-xs"><i data-feather="bell" class="size-5"></i><span>Notification</span></div>
-            
+        <div id="toggleSidebar" class="h-8 w-8 items-end justify-center flex sm:hidden ">
+            <i class="fa-solid fa-bars text-2xl m-[-1px]"></i>
         </div>
-        <a href="login.html"><i data-feather="user" class="size-10 relative left-3 mx-6 my-2 hidden sm:block"></i></a>
-
-        <div class="flex items-center">
-            <div id="hamburger" class="sm:hidden ml-4">
-                <i id="toggleSidebar" data-feather="menu" class="size-6 font-extrabold cursor-pointer font-white text-white"></i>
-            </div>
-        </div>
-    </nav>
-      <!-- sidebar -->
-      <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+    </header>
+    <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
         <ul class="py-8">
-            <li><a href="index.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Home</a></li>
-            <li><a href="navig.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Navigation</a></li>
-            <li><a href="help.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Support</a></li>
-            <li><a href="#" id="closeSidebar" class="block px-4 py-2 text-sm hover:bg-gray-800">Close</a></li>
             <li><a href="login.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Profile</a></li>
-
+            <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-800">Home</a></li>
+            <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-800">Navigation</a></li>
+            <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-800">History</a></li>
+            <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-800">Notifications</a></li>
+            <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-800">Help</a></li>
+            <li><a href="#" id="closeSidebar" class="block px-4 py-2 text-sm hover:bg-gray-800">Close</a></li>
+            <i data-feather="user" class="size-10 relative left-3 mx-6 my-2"></i>
         </ul>
     </div>
-    <div class=" my-3 mx-auto flex flex-col min-w-[45%] ">
-    <p class=" my-3 flex flex-col items-center justify-center text-s">Booking</p>
-    <hr style="height: 1px; background-color: #22223b; border: none;">
-    <h3 class=" font-bold flex flex-col items-center justify-center">Today</h3>
-    <p  style="color: 4A4E69;" class=" my-2 flex flex-col items-center justify-center">No bookings yet!</p>
-    <hr style="height: 1px; background-color: #22223b; border: none;">
-    <h3 class=" my-3 font-bold flex flex-col items-center justify-center">History</h3>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
+
+    <p class="m-4 text-xl font-semibold">Bookings</p>
+    <main class="flex flex-col items-center sm:items-start sm:justify-evenly sm:flex-row"> 
+        <div class=" my-3 mx-3 flex flex-col min-w-[45%] "> 
+            <hr style="height: 1px; background-color: #22223b; border: none;">
+            <h3 class=" font-bold flex flex-col items-center justify-center">Today</h3>
+            <p  style="color: 4A4E69;" class=" my-2 flex flex-col items-center justify-center">No bookings yet!</p>
+            <hr style="height: 1px; background-color: #22223b; border: none;">
+        </div>
+      
+        <div class=" max-w-[500px]  lg:w-[30%]  flex flex-col items-center ">
+           
+            <h3 class=" my-3 font-bold flex flex-col items-center justify-center">History</h3>
+            <div class="w-[100%] h-110 shadow-lg m-5 mx-2 p-5 flex relative items-center bg-white rounded-lg">
+                <a href="customerdetails.html">
+                    <img src="Images/bg.jpg" class="h-[100px] w-[100px] border border-solid border-gray-900 rounded-md object-cover">
+                </a>
+                <div class="pl-4">
+                    <p class="font-bold text-xl">Customer Name</p>
+                    <p>Date: 01-01-2024</p>
+                    <p class="text-sm">Liscence no.</p>        
+                </div>
+               
+            </div>
+        </div>
+    </main>
+
+
+<footer class="bg-Bpurple py-[30px] mt-[170px]">
+    <div class="max-w-[1170px] m-auto ">
+        <div class="flex flex-wrap justify-center sm:flex-row ml-[1rem] ">
+            <div class="w-[50%] py-[15px] sm:w-[25%]">
+                <h4 class=" text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-green-400 max-w-[50px]">company</h4>
+                <ul class="space-y-2 ">
+                    <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">about us</a></li>
+                    <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">our services</a></li>
+                    <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">privacy policy</a></li>
+                </ul>
+            </div>
+
+            <div class="w-[50%] py-[15px] sm:w-[25%]">
+                <h4 class=" text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-green-400 max-w-[50px]	"> <pre class="font-poppins font-medium">Get Help</pre></h4>
+                <ul class="list-none space-y-2">
+                    <li class="mb-2"><a href="#" class="text-base no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">Help</a></li>
+                    <li class="mb-2"><a href="#" class="text-base no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">Contact Us</a></li>
+                    <li class="mb-2"><a href="#" class="text-base no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">Payment Options</a></li>
+                </ul>
+            </div>
+            
+            <div class=" py-[15px] sm:w-[25%]">
+                <h4 class="text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-green-400 max-w-[50px] "><pre class="font-poppins font-medium">Follow Us</pre></h4>
+                <div class="flex gap-2 flex-wrap">
+                    <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
-<main class="flex flex-col items-center sm:items-start sm:justify-evenly sm:flex-row">
-    <div class=" max-w-[500px]  lg:w-[30%]  flex flex-col items-center ">
-        <div class="w-[100%] h-110 shadow-lg m-5 mx-2 p-5 flex relative items-center bg-white rounded-lg">
-            <a href="customerdetails.html">
-                <img src="Images/bg.jpg" class="h-[100px] w-[100px] border border-solid border-gray-900 rounded-md object-cover">
-            </a>
-            <div class="pl-4">
-                <p class="font-bold text-xl">Customer Name</p>
-                <p>Date: 01-01-2024</p>
-                <p class="text-sm">Liscence no.</p>        
-            </div>
-        </div>
-</main>
+</footer>
 
-
-
-
-    <footer class="bg-Bpurple py-[70px] mt-[50px]">
-        <div class="max-w-[1170px] m-auto ">
-            <div class="flex flex-wrap justify-center sm:flex-row ml-[1rem] ">
-                <div class="w-[50%] py-[15px] sm:w-[25%]">
-                    <h4 class=" text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-Bpink max-w-[50px]">company</h4>
-                    <ul class="space-y-2 ">
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">about us</a></li>
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">our services</a></li>
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">privacy policy</a></li>
-                    </ul>
-                </div>
-
-                <div class="w-[50%] py-[15px] sm:w-[25%]">
-                    <h4 class=" text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-Bpink max-w-[50px]	"> <pre class="font-poppins font-medium">Get Help</pre></h4>
-                    <ul class="list-none space-y-2">
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">FAQ</a></li>
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">returns</a></li>
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">CAR status</a></li>
-                        <li class="mb-2"><a href="#" class="text-base capitalize no-underline font-light text-Bpink block transition-all duration-300 ease-in-out hover:text-Twhite hover:pl-[8px]">payment options</a></li>
-                    </ul>
-                </div>
-                
-                <div class="w-[50%] py-[15px] sm:w-[25%]">
-                    <h4 class="text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-Bpink max-w-[50px] "><pre class="font-poppins font-medium">Follow Us</pre></h4>
-                    <div class="flex gap-2 flex-wrap">
-                        <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-<script>
-    //1.
-    feather.replace()
-
-    //2.
-    // Function to toggle sidebar
-    const toggleSidebar = () => {
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('sidebar-overlay');
-        sidebar.classList.toggle('translate-x-full');
-        overlay.classList.toggle('hidden');
-    };
-
-    // Event listener for toggling sidebar
-    document.getElementById('toggleSidebar').addEventListener('click', toggleSidebar);
-
-    // Event listener for closing sidebar when clicking outside of it
-    document.getElementById('sidebar-overlay').addEventListener('click', toggleSidebar);
-
-    // Event listener for closing sidebar when "Close" link is clicked
-    document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
-
-    //4.
-    document.getElementById('userRole').addEventListener('change', function() {
-        var selectedValue = this.value;
-        var errorMessage = document.getElementById('errorMessage');
-
-        if (selectedValue === 'other') {
-            errorMessage.classList.remove('hidden');
-            this.setCustomValidity('Access denied for "Other" users.');
-        } else {
-            errorMessage.classList.add('hidden');
-            this.setCustomValidity('');
-        }
-    });
-</script>
+    <script>
+        // Function to toggle sidebar
+        const toggleSidebar = () => {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        };
+    
+        // Event listener for toggling sidebar
+        document.getElementById('toggleSidebar').addEventListener('click', toggleSidebar);
+    
+        // Event listener for closing sidebar when clicking outside of it
+        document.getElementById('sidebar-overlay').addEventListener('click', toggleSidebar);
+    
+        // Event listener for closing sidebar when "Close" link is clicked
+        document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
+    </script>
 </body>
 </html>
