@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rent</title>
-    <link rel="stylesheet" href="rent.css">
+    <title>Product</title>
     <link rel="stylesheet" href="./tailwind/output.css" />
     <link rel="stylesheet" href="main.css" />    
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
 </head>
 
 <body class="flex flex-col gap-0 bg-Twhite text-Bpurple w-[100vw] font-rubik">
@@ -26,6 +26,7 @@
                 <div id="myBtn" class="flex flex-col items-center text-xs"><i data-feather="bell" class="size-5"></i><span>Notification</span></div>
             </div> 
         </div>
+        
         <div class="flex items-center">
             <a href="login.html"><i data-feather="user" class="size-10 relative left-3 mx-6 my-2 hidden sm:block"></i></a>
             <div id="hamburger" class="sm:hidden ml-4">
@@ -35,7 +36,7 @@
     </nav>
     
     <!-- sidebar -->
-    <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div id="sidebar" class="bg-gray-900 text-white h-full w-64 fixed top-0 right-0 z-50 transform translate-x-full z-1000 transition-transform duration-300 ease-in-out">
         <ul class="py-8">
             <li><a href="index.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Home</a></li>
             <li><a href="navig.html" class="block px-4 py-2 text-sm hover:bg-gray-800">Navigation</a></li>
@@ -47,18 +48,76 @@
     </div>
     <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
 
-
-    <main class="flex flex-col justify-center items-center m-6 md:flex-row">
-        <div class="h-auto w-[160px] text-center p-4 ">
-            <H1 class="font-bold text-lg">MAP Tarcking </H1>
-            <p>Name: Ani</p>
-            <p>Timing</p>
-            
-        </div>
-        <div class="h-fit w-[80vw] bg-slate-600 items-end flex justify-end"><iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=K.%20K.%20Wagh%20Instidue%20Nashik+(Qride)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps trackers</a></iframe></div>
-    </main>
-
+    <main>
+        <div class="flex w-[100%] flex-col justify-center lg:flex-row px-4">
+            <div class="flex my-1 mx-auto flex-col">
+                <p class="font-bold text-lg">{{ product_data.company_name }}</p>
+                <div class="flex justify-between">
+                    <p class="text-Bpurple m-1">{{ product_data.bike_name }}</p>
+                    <div class="flex items-center text-sm relative">
+                        <i class="fa-solid fa-star m-[1px]"></i>
+                        <i class="fa-solid fa-star m-[1px]"></i>
+                        <i class="fa-solid fa-star m-[1px]" style="color: #22223b;"></i>
+                        <i class="fa-solid fa-star m-[1px]" style="color: #22223b;"></i>
+                        <i class="fa-regular fa-star m-[1px]" style="color: #22223b;"></i>
+                        <p class="rating m-1">{{ product_data.rating }}</p>
+                    </div>
+                </div>
+                <div class="max-w-[400px] h-[400px] bg-contain flex items-center justify-center shadow-lg m-1">
+                    <img src="{{ product_data.image_url }}" alt="" class="object-cover w-full h-full">
+                </div>
+            </div>
     
+            <div class="flex flex-col min-w-[50%]">
+                <div class="flex flex-col gap-2 w-[90%] justify-center m-auto text-black">
+                    <hr class="block" style="height: 1px; background-color: #22223b; border: none;">
+    
+                    <div class="flex self-start">
+                        <p>Price : Rs. </p>
+                        <p class="font-bold text-lg mx-1">{{ product_data.price }}</p>
+                    </div>
+                    <div class="flex self-start">
+                        <p>Availability :</p>
+                        <p class="font-bold text-lg mx-1">{{ product_data.Availability }}</p>
+                    </div>
+                    <div class="flex self-start">
+                        <p>Time Slot : </p>
+                        <p class="font-bold text-lg mx-1">{{ product_data.timeslot }}</p>
+                    </div>
+                    <div class="flex self-start">
+                        <i class="fa-solid fa-location-dot" style="color: #22223b; margin: 4px;"></i>
+                        <p>{{ product_data.location }}</p>
+                    </div>
+                    <button id="bookNowBtn" class="bg-Bpurple text-Twhite text-[1.3rem] m-2 relative self-center h-[30px] w-[200px] rounded-2xl cursor-pointer hover:opacity-80 transition-all duration-200">
+                        Rent Now
+                    </button>
+    
+                    <hr style="height: 1px; background-color: #22223b; border: none;">
+    
+                    <p style="font-size: 1.2rem; margin-top: 0.5rem;">Vehicle Details</p>
+    
+                    <div style="display: flex; padding:0.5rem;">
+                        <div style="position: relative; width: 50%; display: flex; flex-direction: column; justify-content: space-evenly;">
+                            <p class="font-bold text-lg mx-1">Model</p>
+                            <p class="font-bold text-lg mx-1">Vehicle no.</p>
+                            <p class="font-bold text-lg mx-1">Mileage</p>
+                            <p class="font-bold text-lg mx-1">Power</p>
+                            <p class="font-bold text-lg mx-1">Weight</p>
+                        </div>
+                        <div style="display: flex; flex-direction: column; justify-content: space-evenly;">
+                            <p>{{ product_data.model }}</p>
+                            <p>{{ product_data.vehicle_no }}</p>
+                            <p>{{ product_data.mileage }}</p>
+                            <p>{{ product_data.power }}</p>
+                            <p>{{ product_data.weight }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+       
+        
     <footer class="bg-Bpurple py-[30px] mt-[50px]">
         <div class="max-w-[1170px] m-auto ">
             <div class="flex flex-wrap justify-center sm:flex-row ml-[1rem] ">
@@ -93,28 +152,58 @@
         </div>
     </footer>
 
-    <script>
-        //1.
-        feather.replace()
-    
-        //2.
-        // Function to toggle sidebar
-        const toggleSidebar = () => {
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('sidebar-overlay');
-            sidebar.classList.toggle('translate-x-full');
-            overlay.classList.toggle('hidden');
-        };
-    
-        // Event listener for toggling sidebar
-        document.getElementById('toggleSidebar').addEventListener('click', toggleSidebar);
-    
-        // Event listener for closing sidebar when clicking outside of it
-        document.getElementById('sidebar-overlay').addEventListener('click', toggleSidebar);
-    
-        // Event listener for closing sidebar when "Close" link is clicked
-        document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
-    
+    <script >
+    //1.
+    feather.replace()
+
+    //2.
+    // Function to toggle sidebar
+    const toggleSidebar = () => {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        sidebar.classList.toggle('translate-x-full');
+        overlay.classList.toggle('hidden');
+    };
+
+    // Event listener for toggling sidebar
+    document.getElementById('toggleSidebar').addEventListener('click', toggleSidebar);
+
+    // Event listener for closing sidebar when clicking outside of it
+    document.getElementById('sidebar-overlay').addEventListener('click', toggleSidebar);
+
+    // Event listener for closing sidebar when "Close" link is clicked
+    document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
+
+
+    //3.
+    // Get the button and popup elements
+    const bookNowBtn = document.getElementById('bookNowBtn');
+    const popup = document.getElementById('popup');
+    const agreeCheckbox = document.getElementById('agreeCheckbox');
+    const continueBtn = document.getElementById('continueBtn');
+
+    // Function to open the popup when the button is clicked
+    bookNowBtn.addEventListener('click', () => {
+    popup.style.display = 'block';
+    });
+
+    // Function to close the popup when the close button is clicked
+    function closePopup() {
+    popup.style.display = 'none';
+    }
+
+    // Function to handle checkbox change event
+    agreeCheckbox.addEventListener('change', () => {
+    // Enable continue button if checkbox is checked, disable it otherwise
+    continueBtn.disabled = !agreeCheckbox.checked;
+    });
+
+    // Function to handle continue button click event
+    continueBtn.addEventListener('click', () => {
+    // Redirect to a new page
+    window.location.href = 'page4.html'; // Replace 'newpage.html' with the URL of the new page
+    });
+
     </script>
-    </body>
-    </html>
+</body>
+</html>
