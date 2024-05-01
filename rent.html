@@ -60,7 +60,7 @@
 
     <div class="main">
         {% for item in rent_data %}
-        <div class="info cursor-pointer" onclick="window.open('{{ url_for('product') }}','mywindow');">
+        <div class="info cursor-pointer" onclick="window.open('{{ product.html }}','mywindow');">
             <div class="img" style="background-image: url('{{ item.image_url }}');"></div>
             <div class="content">
                 <p class="company-name">{{ item.company_name }}</p>

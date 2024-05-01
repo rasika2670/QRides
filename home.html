@@ -7,12 +7,20 @@
     <link rel="icon" href="./Images/2.png" type="image/icon type"/>
     <link rel="stylesheet" href="./tailwind/output.css" />
     <link rel="stylesheet" href="main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <script src="https://unpkg.com/feather-icons"></script>
-    
-
+    <style>
+        div>img{
+            height: 90vh;
+            width: 100vw;
+            background-position: center;
+            background-position-y: center;
+            object-fit: cover;
+        }
+    </style>
 </head>
-<body class="flex flex-col gap-0 bg-Twhite text-Bpurple w-[100vw] font-rubik">  
+<body class="flex flex-col gap-0 bg-Twhite text-Bpurple w-[100vw] h-[100vh] font-rubik">  
     <header>
         <div class="bg-Bpurple h-[60px] flex items-center justify-center">
             <a href="#"><img src="Images/logo.jpg" style="height: 60px;"></a>
@@ -21,40 +29,56 @@
             </p>
     </header>
     
-    <div class="flex flex-col flex-wrap flex-grow min-h-[75vh] m-[auto 5rem] items-center justify-center ">
-
-        <div class="bg-Bsilver flex flex-col flex-wrap items-center justify-between p-2 max-w-[450px] rounded-lg m-[35px] lg:min-w-[auto]">
-            <div class=" font-bold text-lg border-b-2 border-Bpurple w-[100%] text-center">
-                <h2>Get a Vehicle on Rent</h2>
+    <div class="flex flex-row flex-wrap flex-grow h-[80vh] m-[auto 5rem] items-center justify-center font-marcellus">
+        <div class="flex flex-col flex-wrap items-center justify-between w-[100%] h-fit lg:min-w-[auto]">
+            <div id="imgSlide" class="flex flex-row justify-center items-center">
+                <div class="image-slide">
+                    <div class="image-text absolute top-[280px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-40 p-8 rounded-lg w-[280px] text-Twhite sm:left-[250px] sm:top-[350]" >
+                        <h1 class="text-[30px]">Revolutionize travel </h1>
+                        <h3>Pick, Book, Track – it's that easy!</h3>
+                        <div class="h-1 w-6 bg-green-400"></div>
+                        <h3>Discover the Freedom of Convenient Vehicle Rentals</h3>
+                    </div>
+                    <img src="Images/car2.jpg">
+                </div>
+                <div class="image-slide" style="display:none;">
+                    <div class="image-text absolute top-[280px] left-1/2 transform -translate-x-1/2 -translate-y-1/2  bg-black bg-opacity-40 p-8 rounded-lg w-[280px] text-Twhite sm:left-[250px] sm:top-[350]" >
+                        <h1 class="text-[30px]">Discover the city on your terms</h1>
+                        <div class="h-1 w-6 bg-green-400"></div>
+                        <h3>With QRide's fleet of vehicles ready to take you where you desire</h3>
+                    </div>
+                    <img src="Images/bike6.jpg" >
+                </div>
+                <div class="image-slide" style="display:none;">
+                    <div class="image-text absolute top-[280px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-40 p-8 rounded-lg w-[280px] text-Twhite sm:left-[250px] sm:top-[350]" >
+                        <h1 class="text-[30px]">Seize the Day</h1>
+                        <h3>Explore with Ease</h3>
+                        <div class="h-1 w-6 bg-green-400"></div>
+                        <h3>Elevate Your Travel Experience with QRide's Innovative Platform</h3>
+                    </div>
+                    <img src="Images/scooty11.webp">
+                </div>
             </div>
-            <div id="imgSlide" class="flex flex-row justify-center items-center mt-5" >
-                <i data-feather="chevron-left" onclick="plusDivs(-1)" class="text-black mr-2"></i>
-
-                <img src="Images/6.png" style="width:100px">
-                <img src="Images/5.png" style="width:100px">
-                <img src="Images/7.png" style="width:100px">
-                
-                <i data-feather="chevron-right" onclick="plusDivs(1)" class="text-black ml-2"></i>
-            </div>
-              
             <div> <i data-feather="more-horizontal" ></i> </div>
         </div>
-        <div>
-        <button class="h-[50px] w-[100px] rounded-[4px] bg-Bpurple hover:bg-[#303062] active:bg-[#26264e] focus:outline-none focus:ring focus:ring-violet-300 " >
-            <a href="rent.html" class="text-Twhite font-bold text-2xl">
-                Rent
+        <div class="flex flex-col absolute top-[580px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-fit font-poppins sm:left-[250px] sm:top-[440px]">
+            <a href="rent.html" class="inline-block mb-2">
+                <button class="h-[50px] w-[120px] rounded-[4px] bg-Bpurple hover:bg-[#303062] active:bg-[#26264e] focus:outline-none focus:ring focus:ring-violet-300 text-Twhite font-bold text-2xl">
+                    Rent
+                </button>
             </a>
-        </button>
-        
-        <button class="h-[50px] w-[100px] rounded-[4px] bg-Bpurple hover:bg-[#303062] active:bg-[#26264e] focus:outline-none focus:ring focus:ring-violet-300 ">
-            <a href="Lend.html" class="text-Twhite font-bold text-2xl">
-                Lend
+                        
+            <a href="Lend.html" class="inline-block ">
+                <button class="h-[50px] w-[120px] rounded-[4px] bg-Bpurple hover:bg-[#303062] active:bg-[#26264e] focus:outline-none focus:ring focus:ring-violet-300 text-Twhite font-bold text-2xl">
+                    Lend
+                </button>
             </a>
-        </button>
+            
         </div>
         <br>
         <p class="text-Bpurple">Rentals</p>
     </div>
+    
 
     <footer class="bg-Bpurple py-[30px] mt-[50px]">
         <div class="max-w-[1170px] m-auto ">
@@ -77,7 +101,7 @@
                     </ul>
                 </div>
                 
-                <div class=" py-[15px] sm:w-[25%]">
+                <div class=" py-[15px] sm:w-[25%] content-start">
                     <h4 class="text-[18px] text-Twhite capitalize mb-[35px] font-medium relative border-b-2 border-green-400 max-w-[50px] "><pre class="font-poppins font-medium">Follow Us</pre></h4>
                     <div class="flex gap-2 flex-wrap">
                         <a href="#" class="flex items-center justify-center h-10 w-10 bg-[#ffffff33] rounded-full text-white hover:text-gray-900 hover:bg-Twhite transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
@@ -93,23 +117,20 @@
     <script>
     feather.replace()
 
-    var slideIndex = 1;
-    showDivs(slideIndex);
-    
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-    }
-    
-    function showDivs(n) {
-        var i;
-        var x = document.getElementById("imgSlide").getElementsByTagName("img");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
-        for (i = 0; i < x.length; i++) {
+    var slideIndex = 0;
+showDivs();
+
+function showDivs() {
+    var i;
+    var x = document.getElementsByClassName("image-slide");
+    for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";  
-        }
-        x[slideIndex-1].style.display = "block";  
     }
-        </script>
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}    
+    x[slideIndex-1].style.display = "block";  
+    setTimeout(showDivs, 5000); // Change image every 2 seconds
+}
+</script>
 </body>
 </html>
