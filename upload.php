@@ -76,7 +76,7 @@
                     <label for="company-name" class="block font-semibold">
                         Company Name:
                     </label>
-                    <input type="text" id="company-name" name="company-name" placeholder="Company Name" class="w-full px-3 py-2 border rounded-md 
+                    <input type="text" id="company-name" name="company" placeholder="Company Name" class="w-full px-3 py-2 border rounded-md 
                     focus:outline-none focus:border-Bpurple drop-shadow" >
                 </div>
                 <div class="mb-4">
@@ -92,14 +92,14 @@
                         <label for="availablity" class="block font-semibold ">
                             Availablity:
                         </label>
-                        <input type="text" id="availTo" name="availTo" placeholder="To" class="w-[98%] mx-1 px-3 py-2 border rounded-md 
+                        <input type="text" id="availFrom" name="day_from" placeholder="From" class="w-[98%] mx-1 px-3 py-2 border rounded-md 
                         focus:outline-none focus:border-Bpurple drop-shadow" >
                     </div>
                     <div class="mb-4">
                         <label for="availablity" class="block font-semibold text-Twhite">
                             .
                         </label>
-                        <input type="text" id="availFrom" name="availFrom" placeholder="From" class="w-[98%] mx-1 px-3 py-2 border rounded-md 
+                        <input type="text" id="availTo" name="day_to" placeholder="To" class="w-[98%] mx-1 px-3 py-2 border rounded-md 
                         focus:outline-none focus:border-Bpurple drop-shadow" >
                     </div>
                 </div>
@@ -109,14 +109,14 @@
                         <label for="time" class="block font-semibold ">
                             Time:
                         </label>
-                        <input type="number" id="timeTo" name="timeTo" placeholder="To" class="w-[98%] mx-1 px-3 py-2 border rounded-md 
+                        <input type="number" id="timeFrom" name="time_from" placeholder="From" class="w-[98%] mx-1 px-3 py-2 border rounded-md 
                         focus:outline-none focus:border-Bpurple drop-shadow" >
                     </div>
                     <div class="mb-4">
                         <label for="time" class="block font-semibold text-Twhite">
                             .
                         </label>
-                        <input type="number" id="timeFrom" name="timeFrom" placeholder="From" class="w-[98%] mx-1 px-3 py-2 border rounded-md 
+                        <input type="number" id="timeTo" name="time_to" placeholder="To" class="w-[98%] mx-1 px-3 py-2 border rounded-md 
                         focus:outline-none focus:border-Bpurple drop-shadow" >
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                     <label for="password" class="block font-semibold ">
                         Photos:
                     </label>
-                    <input type="file" id="photos" name="photos" class="w-full px-3 py-2 border rounded-md 
+                    <input type="file" id="photos" name="img" class="w-full px-3 py-2 border rounded-md 
                     focus:outline-none focus:border-Bpurple " >
                 </div>
     
@@ -145,7 +145,7 @@
                     <label for="vehicle" class="block font-semibold ">
                         Vehicle no.:
                     </label>
-                    <input type="number" id="vehicle" name="vehicle" placeholder="Vehicle no." class="w-full px-3 py-2 border rounded-md 
+                    <input type="text" id="vehicle" name="vehicle" placeholder="Vehicle no." class="w-full px-3 py-2 border rounded-md 
                     focus:outline-none focus:border-Bpurple drop-shadow" >
                 </div>
     
@@ -180,12 +180,9 @@
                     <input type="number" id="price" name="price" placeholder="Rs." class="w-full px-3 py-2 border rounded-md 
                     focus:outline-none focus:border-Bpurple drop-shadow" >
                 </div>
+                <input type="submit" value="Upload" class="w-[100%] bg-Bpurple text-Twhite font-semibold text-xl py-1 px-4 my-4 rounded-lg 
+                    hover:bg-opacity-[90%] transition duration-100 ">
             </form>
-                <a href="./owner.html" class="mb-6 mx-auto flex justify-center items-center">
-                    <button class="w-[50%] bg-Bpurple text-Twhite font-semibold text-xl py-1 px-4 m-4 rounded-3xl hover:bg-opacity-[90%] transition duration-100">
-                        Upload
-                    </button>
-                </a>
             
         </div>
         
@@ -243,5 +240,57 @@
         // Event listener for closing sidebar when "Close" link is clicked
         document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
     </script>
+
+    
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $servername = "localhost"; // Change this if your MySQL server is on a different host
+    $username = "root"; // Default username in XAMPP is 'root'
+    $password = ""; // Default password is empty in XAMPP
+    $database = "test"; // Name of your database
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $database);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Retrieve user input
+    $company = $_POST['company'];
+    $model = $_POST['model'];
+    $day_from = $_POST['day_from'];
+    $day_to = $_POST['day_to'];
+    $time_from = $_POST['time_from'];
+    $time_to = $_POST['time_to'];
+    $address= $_POST['address'];
+    $img= $_POST['img'];
+    $vehicle= $_POST['vehicle'];
+    $mileage= $_POST['mileage'];
+    $power= $_POST['power'];
+    $weight= $_POST['weight'];
+    $price	= $_POST['price	'];
+
+    // Check if passwords match
+    if ($pass1 !== $pass2) {
+        echo "<p>Passwords do not match.</p>";
+        exit();
+    }
+
+    // Insert data into the signup table
+    $sql = "INSERT INTO upload (company, model, day_from, day_to, time_from, time_to, address ,img , vehicle,mileage ,power , weight , price	) 
+    VALUES ('$company', '$model', '$day_from', '$day_to', '$time_from', '$time_to', '$address' ,'$img' ,'$vehicle','$mileage','$power', '$weight' , '$price')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "<p>New record created successfully</p>";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+}
+?>
+
 </body>
 </html>

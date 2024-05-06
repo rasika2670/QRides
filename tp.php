@@ -1,30 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insert Data</title>
-    <link rel="stylesheet" href="./main.css">
-</head>
-<body>
-
-<h2>Insert Data into Table</h2>
-<script src="./tailwind.config.js"></script>
-<form action="./tp.php" method="post">
-    Name: <input type="text" name="name" class="bg-Bpurple"><br><br>
-    Mobile: <input type="text" name="mobile"><br><br>
-    Email: <input type="text" name="email"><br><br>
-    Message: <textarea name="message"></textarea><br><br>
-    <input type="submit" value="Submit">
-</form>
-
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $servername = "localhost"; // Change this if your MySQL server is on a different host
-    $username = "root"; // Default username in XAMPP is 'root'
-    $password = ""; // Default password is empty in XAMPP
-    $database = "test"; // Name of your database
+session_start();
 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "test";
+
+// Check if the form is submitted
+if(isset($_POST['login'])) {
     // Create connection
     $conn = new mysqli($servername, $username, $password, $database);
 
@@ -35,22 +18,56 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Retrieve user input
     $name = $_POST['name'];
-    $mobile = $_POST['mobile'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+    $password = $_POST['password'];
 
-    // Insert data into the table
-    $sql = "INSERT INTO new (Name, Mobile, Email, Message) VALUES ('$name', '$mobile', '$email', '$message')";
+    // Prepare and execute statement to retrieve user data
+    $stmt = $conn->prepare("SELECT name, pass1 FROM signup WHERE name=?");
+    $stmt->bind_param("s", $name);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    if ($conn->query($sql) === TRUE) {
-        echo "<p>New record created successfully</p>";
+    // Check if a user with the provided username exists
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        // Verify the entered password with the hashed password stored in the database
+        if (password_verify($password, $row['pass1'])) {
+            // Password matches, set session variable and redirect
+            $_SESSION['username'] = $name;
+            header("Location: owner.html");
+            exit();
+        } else {
+            // Invalid password
+            $error_message = "Invalid password. Please try again.";
+        }
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        // User does not exist
+        $error_message = "User not found. Please try again.";
     }
 
+    // Close statement and connection
+    $stmt->close();
     $conn->close();
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+<h2>Login</h2>
+
+<form action="" method="post">
+    Name: <input type="text" name="name" required><br><br>
+    Password: <input type="password" name="password" required><br><br>
+    <input type="submit" name="login" value="Login">
+</form>
+
+<?php if(isset($error_message)) echo "<p>$error_message</p>"; ?>
 
 </body>
 </html>

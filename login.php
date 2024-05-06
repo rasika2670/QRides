@@ -121,7 +121,7 @@
                         <label for="phone" class="block font-semibold ">
                             Phone no.:
                         </label>
-                        <input type="number" id="phone" name="phone" placeholder="Phone no." class="w-full px-3 py-2 border rounded-md 
+                        <input type="number" id="mobile" name="mobile" placeholder="Phone no." class="w-full px-3 py-2 border rounded-md 
                         focus:outline-none focus:border-Bpurple drop-shadow" required>
                     </div>
                     <div class="mb-4">
@@ -142,22 +142,26 @@
                         <label for="password" class="block font-semibold ">
                             Password:
                         </label>
-                        <input type="password" id="password" name="password" placeholder="Password" class="w-full px-3 py-2 border rounded-md 
+                        <input type="password" id="password" name="pass1" placeholder="Password" class="w-full px-3 py-2 border rounded-md 
                         focus:outline-none focus:border-Bpurple drop-shadow" required>
                     </div>
                     <div class="mb-4">
                         <label for="password" class="block font-semibold ">
                             Confirm Password:
                         </label>
-                        <input type="password" id="password" name="password" placeholder="Confirm Password" class="w-full px-3 py-2 border rounded-md 
+                        <input type="password" id="password" name="pass2" placeholder="Confirm Password" class="w-full px-3 py-2 border rounded-md 
                         focus:outline-none focus:border-Bpurple drop-shadow" required>
                     </div>
-                    <a href="owner.html" class="mb-6 mx-auto flex justify-center items-center">
-                        <button type="submit" class="w-[50%] bg-Bpurple text-Twhite font-semibold text-xl py-1 px-4 m-4 rounded-3xl hover:bg-opacity-[90%] transition duration-100">
+                    <input type="submit" value="Submit" class="w-[50%] bg-Bpurple text-Twhite font-semibold text-xl py-1 px-4 m-4 rounded-3xl 
+                        hover:bg-opacity-[90%] transition duration-100">
+                    
+                </form>
+                <a href="owner.html" class="mb-6 mx-auto flex justify-center items-center">
+                        <button type="submit" class="w-[50%] bg-Bpurple text-Twhite font-semibold text-xl py-1 px-4 m-4 rounded-3xl 
+                        hover:bg-opacity-[90%] transition duration-100">
                             Sign Up
                         </button>
                     </a>
-                </form>
             </div>
         </div>
         <img src="Images/Parking-rafiki.png" class="w-[100%] sm:w-[50%] h-[50%] sticky top-0">
@@ -261,5 +265,51 @@
         loginForm.classList.remove('hidden');
     });
 </script>
+
+
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $servername = "localhost"; // Change this if your MySQL server is on a different host
+    $username = "root"; // Default username in XAMPP is 'root'
+    $password = ""; // Default password is empty in XAMPP
+    $database = "test"; // Name of your database
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $database);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Retrieve user input
+    $name = $_POST['name'];
+    $mobile = $_POST['mobile'];
+    $email = $_POST['email'];
+    $address = $_POST['address'];
+    $license = $_POST['license'];
+    $pass1 = $_POST['pass1'];
+    $pass2 = $_POST['pass2'];
+
+    // Check if passwords match
+    if ($pass1 !== $pass2) {
+        echo "<p>Passwords do not match.</p>";
+        exit();
+    }
+
+    // Insert data into the signup table
+    $sql = "INSERT INTO signup (Name, Mobile, Email, Address, License, Pass1, Pass2) VALUES ('$name', '$mobile', '$email', '$address', '$license', '$pass1', '$pass2')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "<p>New record created successfully</p>";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+}
+?>
+
 </body>
 </html>
