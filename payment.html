@@ -74,19 +74,24 @@
                         <!-- credit card info-->
                         <div id="credit-card" class="pt-3">
                             <form class="space-y-4" method="POST" action="../../../../../">
-                                <div> <label class="font-semibold">Card Owner</label> <input type="text" name="username" placeholder="Card Owner Name" required class="form-input block w-full"> </div>
+                                <div> <label class="font-semibold">Card Owner</label> <input type="text" name="username" placeholder="Card Owner Name"  class="form-input block w-full"> </div>
                                 <div> <label class="font-semibold">Card number</label>
-                                    <div class="flex items-center border rounded mt-1"> <input type="text" name="cardNumber" placeholder="Valid card number" class="form-input block w-full" required> <span class="text-xs text-gray-600 mx-2"><i class="fab fa-cc-visa"></i></span> <span class="text-xs text-gray-600 mx-2"><i class="fab fa-cc-mastercard"></i></span> <span class="text-xs text-gray-600 mx-2"><i class="fab fa-cc-amex"></i></span> </div>
+                                    <div class="flex items-center border rounded mt-1"> <input type="text" name="cardNumber" placeholder="Valid card number" class="form-input block w-full" > <span class="text-xs text-gray-600 mx-2"><i class="fab fa-cc-visa"></i></span> <span class="text-xs text-gray-600 mx-2"><i class="fab fa-cc-mastercard"></i></span> <span class="text-xs text-gray-600 mx-2"><i class="fab fa-cc-amex"></i></span> </div>
                                 </div>
                                 <div class="flex space-x-4">
                                     <div class="w-1/2"> <label class="font-semibold">Expiration Month</label>
-                                        <div class="flex mt-1"> <input type="number" name="expirationMonth" placeholder="MM" class="form-input block w-full" required> </div>
+                                        <div class="flex mt-1"> <input type="number" name="expirationMonth" placeholder="MM" class="form-input block w-full" > </div>
                                     </div>
-                                    <div class="w-1/2"> <label class="font-semibold">Expiration Year</label> <input type="number" name="expirationYear" placeholder="YY" class="form-input block w-full" required> </div>
+                                    <div class="w-1/2"> <label class="font-semibold">Expiration Year</label> <input type="number" name="expirationYear" placeholder="YY" class="form-input block w-full" > </div>
                                 </div>
-                                <div> <label class="font-semibold">CVV</label> <input type="text" name="cvv" placeholder="CVV" class="form-input block w-full" required> </div>
-                                <div class="mt-6"> <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">Confirm Payment</button> </div>
+                                <div> <label class="font-semibold">CVV</label> <input type="text" name="cvv" placeholder="CVV" class="form-input block w-full" > </div>
+                                
                             </form>
+                            <a class="mt-6" href="./thankyou.html"> 
+                                <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+                                    Confirm Payment
+                                </button> 
+                            </a>
                         </div>
                     </div>
                     <!-- Paypal info -->

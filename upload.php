@@ -180,10 +180,12 @@
                     <input type="number" id="price" name="price" placeholder="Rs." class="w-full px-3 py-2 border rounded-md 
                     focus:outline-none focus:border-Bpurple drop-shadow" >
                 </div>
-                <input type="submit" value="Upload" class="w-[100%] bg-Bpurple text-Twhite font-semibold text-xl py-1 px-4 my-4 rounded-lg 
-                    hover:bg-opacity-[90%] transition duration-100 ">
+                
             </form>
-            
+            <a href="./owner.html">
+            <button type="submit" value="Upload" class="w-[100%] bg-Bpurple text-Twhite font-semibold text-xl py-1 px-4 my-4 rounded-lg 
+                    hover:bg-opacity-[90%] transition duration-100 ">Upload</button>
+            </a>
         </div>
         
         <img src="Images/Parking-rafiki.png" class="w-[100%] sm:w-[50%] h-[50%] sticky top-0">

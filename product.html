@@ -104,7 +104,8 @@
                 </button>
                 
                 <div id="popup" class="hidden fixed top-0 left-0 w-[100%] h-[100%] bg-[#00000080] z-10">
-                    <div class="bg-white p-5 w-[80%] max-w-[600px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg">
+                    <div class="bg-white p-5  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg"
+                    style="width: 80%; max-width: 600px;">
                         <span class="absolute top-[10px] right-[10px] cursor-pointer" style="color: #22223b;" onclick="closePopup()">&times;</span>
                         <p class="font-bold text-[1.2rem]">Terms and Conditions</p>
                         <!-- Your terms and conditions content here -->
@@ -112,7 +113,8 @@
                         <label for="agreeCheckbox" class="text-Bpurple">
                             <input type="checkbox" id="agreeCheckbox">  Agree
                         </label>
-                        <button id="continueBtn" class="text-Bpurple px-[10px] py-[5px] text-[1rem] absolute bottom-5 right-5 bg-Twhite rounded" disabled>
+                        <button id="continueBtn" class="text-Bpurple px-[10px] py-[5px] text-[1rem] absolute bg-Twhite rounded" disabled
+                        style="position: absolute; bottom: 1.25rem; right: 1.25rem;">
                             Continue
                         </button>
                     </div>
