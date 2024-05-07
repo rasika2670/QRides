@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
-    <link rel="stylesheet" href="./tailwind/output.css" />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <style>
@@ -123,7 +122,7 @@
                 <p>K.K.Wagh Institute of Engineering Education and Research, Panchavati, Nashik, 422207</p>
             </div>
             <div class="flex justify-center items-center">
-                <a href="upload.html" class="relative self-center m-4">
+                <a href="upload.php" class="relative self-center m-4">
                     <button id="bookNowBtn" class="bg-Bpurple text-Twhite text-[1.3rem]  
                     h-[30px] w-[140px] rounded-md cursor-pointer hover:opacity-80 transition-all duration-200
                     flex justify-center items-center">
@@ -138,13 +137,18 @@
                         <i class="fa-regular fa-trash-can m-1"></i>
                         <p class="m-1 font-bold">Delete</p>                    
                     </button>
-                    <div id="confirmationModal" class="hidden fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center">
-                        <div class="modal-content bg-white p-8 rounded shadow-md">
+                    <div id="confirmationModal" class="hidden fixed top-0 left-0 w-full h-full flex items-center justify-center"
+                    style="background-color: rgb(31, 41, 55 ,0.5);">
+                        <div class="modal-content bg-white rounded shadow-md" style=" padding: 1rem;">
                             <p>Are you sure you want to delete?</p>
                             <div class="mt-4 flex justify-center">
-                                <button id="cancelButton" class="mr-4 bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">Cancel</button>
+                                <button id="cancelButton" class="mr-4 text-white font-bold py-2 px-4 rounded"
+                                style="margin-right: 1rem; background-color: rgb(107, 114, 128); ">Cancel</button>
                                 <a href="./owner.html">
-                                    <button id="confirmButton" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Delete</button>
+                                    <button id="confirmButton" class="text-white font-bold py-2 px-4 rounded"
+                                    style="background-color: rgb(230, 53, 53);">
+                                        Delete
+                                    </button>
                                 </a>
                             </div>
                         </div>

@@ -63,28 +63,27 @@
     </div>
    <!-- <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden">-->
 
-<a class="flex justify-between items-center flex-col " href="./index.html">
-    <img src="Images/thanks-1.png" alt="Thank you"  class="rounded-lg -[300px] h-[300px] m-8">
+<div class="flex justify-between items-center flex-col " href="./index.html">
+    <img src="Images/thanks-1.png" alt="Thank you"  class="rounded-lg w-[300px] h-[300px] m-8">
     <div class="flex justify-center items-center flex-col">
-    <div class="container w-[100vw] h-28 relative m-0 flex flex-col items-center overflow-hidden">
-        <img src="./Images/triangle.png" class="w-16 mb-[-0.7rem] content m-4">
-        <div class="w-[100%] h-16 bg-white mb-[-3rem] content rounded-tl-xl rounded-tr-xl overflow-hidden"></div>
+    <div class="container " style="width: 100vw; height: 7rem; position: relative; margin: 0; 
+    display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+        <img src="./Images/triangle.png" class="content "
+        style="width: 4rem; margin:1rem; margin-bottom:-0.7rem;">
+        <div class="content"
+        style="width: 100%; height: 4rem; background-color: #fff; margin-bottom: -4rem; border-top-right-radius: 0.75rem;
+        border-top-left-radius: 0.75rem; overflow: hidden;"></div>
     </div>
-    <div class="w-[100vw] h-10 mt-[-1rem] bg-white flex justify-center text-center items-end  p-12 text-[1.5rem]">
+    <a href="./index.html">
+    <div class=""
+    style="width: 100vw; height: 4rem; margin-top: -1rem; background-color: #fff; display: flex; justify-content: center; 
+    text-align: center; align-items: end; padding: 3rem; font-size: 1.5rem;">
         Done
     </div>
-</div>
-        
-
-    <!-- <div class="box-container" onclick="animateAndRedirect()">
-        <div class="triangle"></div>
-            <div class="box">
-              <button onclick="redirectToHomePage()">Done</button>
-            </div>
-        <div class="inner-triangle"></div>
-    </div> -->
-    
 </a>
+</div>
+    
+</div>
     <footer class="bg-Bpurple py-[30px] ">
         <div class="max-w-[1170px] m-auto ">
             <div class="flex flex-wrap justify-center sm:flex-row ml-[1rem] ">
@@ -139,64 +138,6 @@
 
     // Event listener for closing sidebar when "Close" link is clicked
     document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
-
-
-    //3.
-    // Get the button and popup elements
-    const bookNowBtn = document.getElementById('bookNowBtn');
-    const popup = document.getElementById('popup');
-    const agreeCheckbox = document.getElementById('agreeCheckbox');
-    const continueBtn = document.getElementById('continueBtn');
-
-    // Function to open the popup when the button is clicked
-    bookNowBtn.addEventListener('click', () => {
-    popup.style.display = 'block';
-    });
-
-    // Function to close the popup when the close button is clicked
-    function closePopup() {
-    popup.style.display = 'none';
-    }
-
-    // Function to handle checkbox change event
-    agreeCheckbox.addEventListener('change', () => {
-    // Enable continue button if checkbox is checked, disable it otherwise
-    continueBtn.disabled = !agreeCheckbox.checked;
-    });
-
-    // Function to handle continue button click event
-    continueBtn.addEventListener('click', () => {
-    // Redirect to a new page
-    window.location.href = 'rent.html'; // Replace 'newpage.html' with the URL of the new page
-    });
-
-    //4.
-    document.getElementById('userRole').addEventListener('change', function() {
-        var selectedValue = this.value;
-        var errorMessage = document.getElementById('errorMessage');
-
-        if (selectedValue === 'other') {
-            errorMessage.classList.remove('hidden');
-            this.setCustomValidity('Access denied for "Other" users.');
-        } else {
-            errorMessage.classList.add('hidden');
-            this.setCustomValidity('');
-        }
-    });
-
-    function animateAndRedirect() {
-    var container = document.querySelector('.box-container');
-    container.style.animation = 'bounce 2s ease-in-out'; // Adjust animation duration as needed
-
-    container.addEventListener('animationend', function() {
-        window.location.href = "index.html"; // Replace with your directed page URL
-    }, {once: true});
-} 
-    
-
-   
-
-   
 
     </script>
     </body>
