@@ -17,7 +17,7 @@
             <a href="javascript:history.back()"><i data-feather="arrow-left"></i></a>
         </div>
         <div class="h-[auto] flex flex-row items-center ">
-            <a href="index.html"><img src="/Images/logo.jpg" style="height: 60px;" alt="logo"></a>
+            <a href="index.html"><img src="./Images/logo.jpg" style="height: 60px;" alt="logo"></a>
         
             <div class="hidden sm:flex flex-row flex-wrap flex-grow gap-6 max-w-[700px] justify-between mx-12 lg:flex">
                 <a href="home.html" class="flex flex-col items-center text-xs"><i data-feather="home" class="size-5"></i><span>Home</span></a>
@@ -103,17 +103,19 @@
     
                     
                     <div id="popup" class="hidden fixed top-0 left-0 w-[100%] h-[100%] bg-[#00000080] z-10">
-                        <div class="bg-white p-5 w-[80%] max-w-[600px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg">
+                        <div class="bg-white p-5 w-[600px] md:w-[100%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg">
                             <span class="absolute top-[10px] right-[10px] cursor-pointer" style="color: #22223b;" onclick="closePopup()">&times;</span>
                             <p class="font-bold text-[1.2rem]">Terms and Conditions</p>
                             <!-- Your terms and conditions content here -->
                             <p class="m-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+                            <div style="">
                             <label for="agreeCheckbox" class="text-Bpurple">
                                 <input type="checkbox" id="agreeCheckbox">  Agree
                             </label>
                             <button id="continueBtn" class="text-Bpurple px-[10px] py-[5px] text-[1rem] absolute bottom-5 right-5 bg-Twhite rounded" disabled>
                                 Continue
                             </button>
+                        </div>
                         </div>
                     </div>
                     
