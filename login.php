@@ -152,8 +152,7 @@
                         <input type="password" id="password" name="pass2" placeholder="Confirm Password" class="w-full px-3 py-2 border rounded-md 
                         focus:outline-none focus:border-Bpurple drop-shadow" required>
                     </div>
-                    <input type="submit" value="Submit" class="w-[50%] bg-Bpurple text-Twhite font-semibold text-xl py-1 px-4 m-4 rounded-3xl 
-                        hover:bg-opacity-[90%] transition duration-100">
+                    
                     
                 </form>
                 <a href="owner.html" class="mb-6 mx-auto flex justify-center items-center">

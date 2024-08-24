@@ -19,6 +19,7 @@
             object-fit: cover;
         }
     </style>
+    
 </head>
 <body class="flex flex-col gap-0 bg-Twhite text-Bpurple w-[100vw] h-[100vh] font-rubik">  
     <nav class="bg-Bpurple w-[100%] text-Twhite flex items-center justify-between font-rubik px-[50px] sm:h-[80px] lg:h-[60px]">
@@ -26,7 +27,7 @@
             <a href="javascript:history.back()"><i data-feather="arrow-left"></i></a>
         </div>
         <div class="h-[auto] flex flex-row items-center ">
-            <a href="index.html"><img src="./Images/logo.jpg" style="height: 60px;" alt="logo"></a>
+            <a href="index.html"><img src="/Images/logo.jpg" style="height: 60px;" alt="logo"></a>
         
             <div class="hidden sm:flex flex-row flex-wrap flex-grow gap-6 max-w-[700px] justify-between mx-12 lg:flex">
                 <a href="home.html" class="flex flex-col items-center text-xs"><i data-feather="home" class="size-5"></i><span>Home</span></a>
@@ -70,35 +71,41 @@
         <div class="flex flex-col flex-wrap items-center justify-between w-[100%] h-fit lg:min-w-[auto]">
             <div id="imgSlide" class="flex flex-row justify-center items-center">
                 <div class="image-slide">
-                    <div class="image-text absolute top-[280px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-40 p-8 rounded-lg w-[280px] text-Twhite sm:left-[250px] sm:top-[350]" >
+                    <div class="image-text absolute top-[280px] left-1/2 transform -translate-x-1/2 -translate-y-1/2  p-8 rounded-lg 
+                    w-[320px] text-Twhite sm:left-[250px] sm:top-[350]" style="background-color: rgb(0, 0, 0 ,0.5); position: absolute;
+                    top: 280px; left: 250px;">
                         <h1 class="text-[30px]">Revolutionize travel </h1>
-                        <h3>Pick, Book, Track – it's that easy!</h3>
-                        <div class="h-1 w-6 bg-green-400"></div>
-                        <h3>Discover the Freedom of Convenient Vehicle Rentals</h3>
+                        <h2 style="font-size: 22px;">Pick, Book, Track – it's that easy!</h2>
+                        <div class="h-0.5 w-6 bg-green-400 my-1"></div>
+                        <h3 class="font-rubik">Discover the Freedom of Convenient Vehicle Rentals</h3>
                     </div>
                     <img src="Images/car2.jpg">
                 </div>
                 <div class="image-slide" style="display:none;">
-                    <div class="image-text absolute top-[280px] left-1/2 transform -translate-x-1/2 -translate-y-1/2  bg-black bg-opacity-40 p-8 rounded-lg w-[280px] text-Twhite sm:left-[250px] sm:top-[350]" >
+                    <div class="image-text absolute top-[280px] left-1/2 transform -translate-x-1/2 -translate-y-1/2  p-8 rounded-lg 
+                    w-[320px] text-Twhite sm:left-[250px] sm:top-[350]" style="background-color: rgb(0, 0, 0 ,0.5); position: absolute;
+                    top: 280px; left: 300px;">
                         <h1 class="text-[30px]">Discover the city on your terms</h1>
-                        <div class="h-1 w-6 bg-green-400"></div>
-                        <h3>With QRide's fleet of vehicles ready to take you where you desire</h3>
+                        <div class="h-0.5 w-6 bg-green-400 my-1"></div>
+                        <h3 class="font-rubik">With QRide's fleet of vehicles ready to take you where you desire</h3>
                     </div>
                     <img src="Images/bike6.jpg" >
                 </div>
                 <div class="image-slide" style="display:none;">
-                    <div class="image-text absolute top-[280px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-40 p-8 rounded-lg w-[280px] text-Twhite sm:left-[250px] sm:top-[350]" >
+                    <div class="image-text absolute top-[280px] left-1/2 transform -translate-x-1/2 -translate-y-1/2  p-8 rounded-lg 
+                    w-[320px] text-Twhite sm:left-[250px] sm:top-[350]" style="background-color: rgb(0, 0, 0 ,0.5); position: absolute;
+                    top: 280px; left: 300px;">
                         <h1 class="text-[30px]">Seize the Day</h1>
-                        <h3>Explore with Ease</h3>
-                        <div class="h-1 w-6 bg-green-400"></div>
-                        <h3>Elevate Your Travel Experience with QRide's Innovative Platform</h3>
+                        <h2 style="font-size: 22px;">Explore with Ease</h2>
+                        <div class="h-0.5 w-6 bg-green-400 my-1"></div>
+                        <h3 class="font-rubik">Elevate Your Travel Experience with QRide's Innovative Platform</h3>
                     </div>
                     <img src="Images/scooty11.webp">
                 </div>
             </div>
             <div> <i data-feather="more-horizontal" ></i> </div>
         </div>
-        <div class="flex flex-col absolute top-[580px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-fit font-poppins sm:left-[250px] sm:top-[440px]">
+        <div class="flex flex-col absolute top-[580px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-fit font-poppins sm:left-[250px] sm:top-[440px]" style="position: absolute; left: 260px;">
             <a href="rent.html" class="inline-block mb-2">
                 <button class="h-[50px] w-[120px] rounded-[4px] bg-Bpurple hover:bg-[#303062] active:bg-[#26264e] focus:outline-none focus:ring focus:ring-violet-300 text-Twhite font-bold text-2xl">
                     Rent
