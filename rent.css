@@ -48,7 +48,7 @@ p{
 .img{
     height: 100px;
     width: 100px;
-    background-color: white;
+    background-color: transparent;
     border: 1px solid #22223b;
     border-radius: 4px;
     display: flex;
