@@ -70,7 +70,6 @@
     <main class="flex flex-col  justify-evenly  sm:flex-row transition-all duration-300">
         <div class="max-w-[500px] mt-4 mx-2 p-2">
             <h2 class="text-2xl font-bold">Upload</h2>
-            <hr class="bg-Bpurple h-[2px] mb-4">
             <form action="#" method="post" >
                 <div class="my-4">
                     <label for="company-name" class="block font-semibold">
@@ -242,57 +241,5 @@
         // Event listener for closing sidebar when "Close" link is clicked
         document.getElementById('closeSidebar').addEventListener('click', toggleSidebar);
     </script>
-
-    
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $servername = "localhost"; // Change this if your MySQL server is on a different host
-    $username = "root"; // Default username in XAMPP is 'root'
-    $password = ""; // Default password is empty in XAMPP
-    $database = "test"; // Name of your database
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $database);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Retrieve user input
-    $company = $_POST['company'];
-    $model = $_POST['model'];
-    $day_from = $_POST['day_from'];
-    $day_to = $_POST['day_to'];
-    $time_from = $_POST['time_from'];
-    $time_to = $_POST['time_to'];
-    $address= $_POST['address'];
-    $img= $_POST['img'];
-    $vehicle= $_POST['vehicle'];
-    $mileage= $_POST['mileage'];
-    $power= $_POST['power'];
-    $weight= $_POST['weight'];
-    $price	= $_POST['price	'];
-
-    // Check if passwords match
-    if ($pass1 !== $pass2) {
-        echo "<p>Passwords do not match.</p>";
-        exit();
-    }
-
-    // Insert data into the signup table
-    $sql = "INSERT INTO upload (company, model, day_from, day_to, time_from, time_to, address ,img , vehicle,mileage ,power , weight , price	) 
-    VALUES ('$company', '$model', '$day_from', '$day_to', '$time_from', '$time_to', '$address' ,'$img' ,'$vehicle','$mileage','$power', '$weight' , '$price')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "<p>New record created successfully</p>";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-    $conn->close();
-}
-?>
-
 </body>
 </html>
