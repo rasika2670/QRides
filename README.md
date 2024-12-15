@@ -60,4 +60,57 @@ Contributions are welcome! Follow these steps:
 3.	Submit a pull request with a description of your changes.
 
 
-live at https://rasika2670.github.io/QRides
+Project Live at https://rasika2670.github.io/QRides
+
+**Project Scope**
+
+**1. Introduction**
+
+QRide is a user-centric vehicle rental platform that revolutionizes the traditional rental process. The platform aims to cater to diverse rental needs by offering a wide range of vehicles for personal or professional use. With features such as real-time availability, online booking, and dynamic pricing, QRide ensures a seamless and reliable experience for both renters and vehicle owners.
+
+**2. Purpose**
+
+The purpose of QRide is to create an efficient, scalable, and user-friendly platform that eliminates inefficiencies in existing vehicle rental systems. By leveraging modern technology, QRide provides sustainable and collaborative transportation solutions to enhance urban mobility.
+
+**3. Objectives**
+
+•	Simplify the vehicle rental process with an intuitive, automated online system.
+
+•	Provide a robust platform for vehicle owners to list and manage their fleets.
+
+•	Offer renters a variety of vehicles, dynamic pricing, and transparent booking options.
+
+•	Enhance customer satisfaction with advanced search filters, multiple payment modes, and location-based services.
+
+•	Expand access to vehicle rentals for domestic and international users.
+
+**4. Target Audience**
+
+Renters: Individuals and businesses needing short-term or long-term rental vehicles.
+
+Vehicle Owners: People looking to monetize their vehicles through rentals.
+
+Travelers: Domestic and international tourists seeking reliable transportation options.
+
+**5. Limitations**
+
+•	Limited to locations with an active fleet presence.
+
+•	Dependence on stable internet connectivity for real-time features.
+
+**6. Future Enhancements**
+
+•	Integration with insurance providers for additional coverage.
+
+•	Mobile application development for iOS and Android platforms.
+
+•	AI-based recommendations to optimize vehicle selection.
+
+•	In-app chat between renters and vehicle owners.
+
+•	Expanded support for multilingual and international users.
+
+**7. Conclusion**
+
+QRide aims to bridge the gap between vehicle owners and renters by creating a modern, accessible platform for rentals. By addressing user pain points and leveraging innovative features, QRide envisions becoming a leading player in the vehicle rental industry.
+
